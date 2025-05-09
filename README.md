@@ -1,8 +1,10 @@
 # Judul Proyek
 
+Aplikasi Web Jurnal Kegiatan Mahasiswa (StudentLogBook)
+
 ## Deskripsi
 
-Aplikasi web ini dikembangkan untuk [tujuan proyek], menggunakan HTML, CSS, JavaScript, PHP, dan MySQL/Textfile. Aplikasi ini memiliki fitur utama seperti [daftar fitur].
+Aplikasi ini memungkinkan mahasiswa mencatat dan melaporkan aktivtas harian mereka seperti magang, KKN, atau tugas akhir.
 
 ## Kelompok
 
