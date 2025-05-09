@@ -1,6 +1,4 @@
-# Judul Proyek
-
-Aplikasi Web Jurnal Kegiatan Mahasiswa (StudentLogBook)
+# Aplikasi Web Jurnal Kegiatan Mahasiswa (StudentLogBook)
 
 ## Deskripsi
 
@@ -8,13 +6,13 @@ Aplikasi ini memungkinkan mahasiswa mencatat dan melaporkan aktivtas harian mere
 
 ## Kelompok
 
-| Nama Anggota            | NIM          | Peran                    |
-| ----------------------- | ------------ | ------------------------ |
-| [Muhammad Fauzan Anwar] | [2400018012] | Frontend Developer       |
-| [Ahmad Fadhil Fanani]   | [2400018026] | Backend Developer        |
-| [Lutfan Alaudin Naja]   | [2400018032] | Database Manager         |
-| [Nama 4]                | [NIM 4]      | GitHub Manager           |
-| [Nama 5]                | [NIM 5]      | Project Manager / Tester |
+| Nama Anggota          | NIM        | Peran                    |
+| --------------------- | ---------- | ------------------------ |
+| Muhammad Fauzan Anwar | 2400018012 | Frontend Developer       |
+| Ahmad Fadhil Fanani   | 2400018026 | Backend Developer        |
+| Lutfan Alaudin Naja   | 2400018032 | Database Manager         |
+| Nama 4                | NIM 4      | GitHub Manager           |
+| Nama 5                | NIM 5      | Project Manager / Tester |
 
 ## Teknologi yang Digunakan
 
