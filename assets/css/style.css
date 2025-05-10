@@ -202,3 +202,67 @@ body {
 }
 
 /* INI AKHIR FITUR NYA */
+
+/* Ini Bagian Advertise */
+
+#advertise {
+  margin: 90px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.advertiseText h1 {
+  font-size: 36px;
+}
+
+.advertiseText p {
+  color: #575455;
+  padding-top: 22px;
+  padding-bottom: 40px;
+}
+
+.advertiseText h4 {
+  font-size: 16px;
+  color: #0c4eaa;
+  padding-bottom: 20px;
+}
+
+.advertiseImage img {
+  border-radius: 30px;
+  width: 670px;
+  height: 428px;
+}
+
+.advertiseButton button {
+  background-color: #1f7cff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  width: 180px;
+  height: 48px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.advertiseButton button:hover {
+  background-color: #0c4eaa;
+  cursor: pointer;
+  transition: ease-out;
+  transition-duration: 0.1s;
+}
+
+.advertiseButton input {
+  background-color: #f5f6fb;
+  color: #575455;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  width: 299px;
+  height: 48px;
+  cursor: pointer;
+}
+
+/* Ini Akhir Bagian Advertise */
