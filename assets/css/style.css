@@ -206,11 +206,11 @@ body {
 /* Ini Bagian Advertise */
 
 #advertise {
-  margin: 90px 50px 0px 50px;
+  margin: 90px 50px 100px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
 }
 
 .advertiseText h1 {
@@ -266,3 +266,25 @@ body {
 }
 
 /* Ini Akhir Bagian Advertise */
+
+/* Ini Bagian Testimoni */
+
+.testimoniText h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.testimoniText p {
+  color: #575455;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.testimoniText h4 {
+  font-size: 16px;
+  color: #0c4eaa;
+  padding-bottom: 5px;
+  text-align: center;
+}
+/* Ini Akhir Bagian Testimoni */
