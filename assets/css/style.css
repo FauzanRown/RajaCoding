@@ -93,10 +93,7 @@ body {
 
 .containerContent p {
   padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.containerContent p {
+  padding-bottom: 40px;
   color: #575455;
 }
 
@@ -288,3 +285,74 @@ body {
   text-align: center;
 }
 /* Ini Akhir Bagian Testimoni */
+
+/* INI BAGIAN FOOTER */
+
+#Footer {
+  margin: 90px 50px 30px 50px;
+}
+
+.copyright {
+  color: #000000;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 30px;
+}
+
+.isikonten {
+  width: 25%;
+  text-align: left;
+  color: #575455;
+}
+
+.isikonten h1 {
+  font-size: 28px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.isikonten h6 {
+  color: #10507f;
+  padding-bottom: 10px;
+}
+
+.isikonten img {
+  width: 90%;
+  padding-bottom: 30px;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-around;
+  gap: 70px;
+  margin: 50px;
+}
+
+.footerContent ul li a {
+  text-decoration: none;
+  color: #575455;
+  list-style: none;
+}
+
+.footerContent ul li a:hover {
+  color: #1f7cff;
+  cursor: pointer;
+  transition: ease-out;
+  transition-duration: 0.1s;
+}
+
+.footerContent ul li {
+  list-style: none;
+  padding: 3px 0px 3px 0px;
+}
+
+.contact1,
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #191046;
+  margin-bottom: 14px;
+}
+
+/* Ini Akhir Bagian Footer */
