@@ -9,7 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  max-width: 1440px;
+  max-width: 1500px;
   margin: auto;
 }
 
@@ -352,20 +352,6 @@ body {
 /* INI AKHIR BAGIAN TESTIMONI */
 
 /*  INI BAGIAN CTA NYA */
-/* #CTA {
-  margin: 120px 0px 60px 0px;
-  background-image: url(../img/CTA\ Background.png);
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  filter: brightness(0.5);
-} */
 
 #CTA {
   position: relative;
@@ -382,13 +368,14 @@ body {
 
 #CTA .CTAContent {
   padding-top: 30px;
+
   position: absolute;
-  top: 0.2;
+  top: 75px;
   left: 0;
   right: 0;
   bottom: 0;
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 #CTA h1 {
@@ -419,6 +406,7 @@ body {
   cursor: pointer;
   font-weight: bold;
   font-size: 15px;
+  margin-right: 23px;
 }
 
 #CTA button:hover {
