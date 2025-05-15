@@ -324,6 +324,7 @@ body {
   background-color: #f5f6fb;
   gap: 10px;
   text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .testimoniPerson p {
