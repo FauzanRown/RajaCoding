@@ -351,6 +351,83 @@ body {
 }
 /* INI AKHIR BAGIAN TESTIMONI */
 
+/*  INI BAGIAN CTA NYA */
+/* #CTA {
+  margin: 120px 0px 60px 0px;
+  background-image: url(../img/CTA\ Background.png);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  filter: brightness(0.5);
+} */
+
+#CTA {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+#CTA img {
+  filter: brightness(0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#CTA .CTAContent {
+  padding-top: 30px;
+  position: absolute;
+  top: 0.2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  color: white;
+}
+
+#CTA h1 {
+  font-size: 44px;
+  padding-bottom: 15px;
+  font-weight: 800;
+  z-index: 999px;
+}
+
+#CTA p {
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+
+.CTAContent a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#CTA button {
+  background-color: #1f7cff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 180px;
+  height: 48px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#CTA button:hover {
+  background-color: #0c4eaa;
+  cursor: pointer;
+  transition: ease-out;
+  transition-duration: 0.1s;
+}
+
 /* INI BAGIAN FOOTER */
 
 #Footer {
