@@ -12,7 +12,7 @@ Aplikasi ini memungkinkan mahasiswa mencatat dan melaporkan aktivtas harian mere
 | Ahmad Fadhil Fanani   | 2400018026 | Backend Developer        |
 | Lutfan Alaudin Naja   | 2400018032 | Database Manager         |
 | Shandy Dwika Alfarezki| 2400018033 | GitHub Manager           |
-| Nama 5                | NIM 5      | Project Manager / Tester |
+| Farhan                | 2400018009 | Project Manager / Tester |
 
 ## Teknologi yang Digunakan
 
