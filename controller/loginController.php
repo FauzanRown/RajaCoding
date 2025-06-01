@@ -14,7 +14,6 @@ function login (){
   }
     
   $result = query("SELECT * FROM user WHERE email = '$email' ");
-  var_dump($result);
   if (count($result)==1) {
     if (password_verify($password,$result[0]["password"])) {
       $_SESSION["login"] = true;
