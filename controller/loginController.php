@@ -9,7 +9,7 @@ function login (){
     $errors['email'] = "Email wajib diisi.";
   } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors['email'] = "Format email tidak valid.";
-  }else if (substr($email, -14) !== '@tif.uad.ac.id' || substr($email, -18) !== '@webmail.uad.ac.id') {
+  }else if (!preg_match('/@(tif|webmail)\.uad\.ac\.id$/', $email)) {
     $errors['email'] = "Harus menggunakan email UAD";
   }
     
