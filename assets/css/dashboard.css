@@ -253,6 +253,16 @@ textarea {
   background-color: #2563eb;
 }
 
+.form-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.form-flex .form-group {
+  min-width: 400px;
+  flex: 1;
+}
+
 footer {
   text-align: center;
   font-size: 12px;
