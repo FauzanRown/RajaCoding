@@ -258,6 +258,10 @@ textarea {
   gap: 20px;
 }
 
+.tambahin {
+  margin-top: 80px;
+}
+
 .form-flex .form-group {
   min-width: 400px;
   flex: 1;
