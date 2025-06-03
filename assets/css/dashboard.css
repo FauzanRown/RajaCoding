@@ -237,12 +237,16 @@ textarea {
 
 .submit-button {
   text-align: right;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .submit-button button {
-  padding: 8px 20px;
+  padding: 11px 27px;
   background-color: #3b82f6;
   color: white;
+  font-weight: 600;
   border: none;
   border-radius: 6px;
   cursor: pointer;
