@@ -277,3 +277,8 @@ footer {
   color: #555;
   margin-top: 40px;
 }
+
+.form-container h1 {
+  font-size: 28px;
+  margin-top: 20px;
+}
