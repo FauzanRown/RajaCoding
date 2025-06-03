@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard | Journal Anda</title>
     <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css"
+    />
   </head>
+
+  <!-- jQuery (wajib untuk DataTables 2.x saat ini) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- DataTables + Bootstrap 5 integration -->
+  <script src="https://cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/2.3.1/js/dataTables.bootstrap5.min.js"></script>
+
   <body>
     <div class="container">
       <div id="sidebar">
@@ -107,6 +123,45 @@
           <input type="search" placeholder="Cari Journal Anda " />
         </div>
 
+        <table id="example" class="table table-striped">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul</th>
+              <th>Kategori</th>
+              <th>Tanggal</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gavin Joyce</td>
+              <td>Developer</td>
+              <td>Edinburgh</td>
+              <td>42</td>
+              <td>2010-12-22</td>
+              <td>$92,575</td>
+            </tr>
+            <tr>
+              <td>Jennifer Chang</td>
+              <td>Regional Director</td>
+              <td>Singapore</td>
+              <td>28</td>
+              <td>2010-11-14</td>
+              <td>$357,650</td>
+            </tr>
+            <tr>
+              <td>Brenden Wagner</td>
+              <td>Software Engineer</td>
+              <td>San Francisco</td>
+              <td>28</td>
+              <td>2011-06-07</td>
+              <td>$206,850</td>
+            </tr>
+          </tbody>
+        </table>
+
         <p class="copyright">
           All Rights Reserved • Copyright StudentLogbook by RajaCoding 2025 in
           Yogyakarta
@@ -114,6 +169,10 @@
       </div>
     </div>
 
-    <script src="../../assets/js/Role User/tambahjournal.js"></script>
+    <script src="../../assets/js/Role User/journalanda.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.1/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.3.1/js/dataTables.bootstrap5.js"></script>
   </body>
 </html>
