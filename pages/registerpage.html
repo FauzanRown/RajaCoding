@@ -15,13 +15,25 @@
           <p>Masukan Username dan Password Anda</p>
 
           <form action="" method="post" enctype="multipart/form-data">
-            <input type="text" placeholder="Username" />
-            <input type="email" placeholder="Email" />
-            <input type="file" >
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
+            <label for="username">Username</label><br />
+            <input type="text" id="username" name="username" placeholder="Username" /><br /><br />
+
+            <label for="email">Email</label><br />
+            <input type="email" id="email" name="email" placeholder="Email" /><br /><br />
+
+            <label for="photo">Upload Foto</label><br />
+            <input type="file" id="photo" name="photo" /><br /><br />
+
+            <label for="password">Password</label><br />
+            <input type="password" id="password" name="password" placeholder="Password" /><br /><br />
+
+            <label for="confirm_password">Confirm Password</label><br />
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" /><br /><br />
+
             <button>Daftar</button>
-            <p>Sudah Punya Akun? <a href="./loginpage.html">Masuk</a></p>
+            <p>
+              Sudah Punya Akun? <a href="./loginpage.html">Masuk</a>
+            </p>
           </form>
         </div>
 
