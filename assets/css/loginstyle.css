@@ -41,12 +41,16 @@ body {
   color: #575455;
 }
 
+form span {
+  padding-top: 7px;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 0px;
   padding: 30px 100px 50px 100px;
 }
 
