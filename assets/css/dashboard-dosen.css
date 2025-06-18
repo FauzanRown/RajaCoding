@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -34,6 +34,13 @@ body {
   width: 100px;
   border-radius: 50%;
   margin-bottom: 10px;
+}
+
+.icon-menu {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .menu a {
@@ -96,7 +103,8 @@ table {
   overflow: hidden;
 }
 
-th, td {
+th,
+td {
   padding: 12px;
   text-align: center;
   border-bottom: 1px solid #e5e7eb;
@@ -110,9 +118,15 @@ th, td {
   display: inline-block;
 }
 
-.status.success { background-color: #10b981; }
-.status.danger { background-color: #ef4444; }
-.status.neutral { background-color: #6b7280; }
+.status.success {
+  background-color: #10b981;
+}
+.status.danger {
+  background-color: #ef4444;
+}
+.status.neutral {
+  background-color: #6b7280;
+}
 
 .btn {
   border: none;
@@ -131,6 +145,12 @@ th, td {
   background-color: #eab308;
 }
 
+.icon.edit {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
 .btn.view {
   background-color: #0ea5e9;
   transition: background-color 0.3s;
@@ -139,7 +159,6 @@ th, td {
 .btn.view:hover {
   background-color: #0284c7;
 }
-
 
 .footer {
   margin-top: auto;
