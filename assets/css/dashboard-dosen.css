@@ -75,14 +75,21 @@ body {
 }
 
 .search-bar input {
-  border: none;
-  background: transparent;
+  border: 1px solid #ccc;
+  text-align: center;
+  outline: none;
+  background: white;
+  padding: 8px 12px;
+  max-width: 200px;
   flex: 1;
   font-size: 14px;
+  border-radius: 20px;
 }
 
 .calendar-icon {
   margin-left: 10px;
+  width: 18px;
+  height: 18px;
 }
 
 .content h1 {
