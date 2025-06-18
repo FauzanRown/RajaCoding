@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Dosen - StudentLogbook</title>
+  <link rel="stylesheet" href="/assets/css/dashboard-dosen.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">StudentLogbook</div>
+      <div class="profile">
+        <img src="#" alt="Fulan" class="profile-img">
+        <h2>FULAN AL-FULAN</h2>
+        <p>Dosen</p>
+      </div>
+      <nav class="menu">
+        <a href="#" class="active">📄 List Journal</a>
+        <a href="#">➕ Daftar Mahasiswa</a>
+        <a href="#">✏️ Edit Profile</a>
+        <a href="#">↩️ Keluar</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="search-bar">
+        <input type="text" placeholder="Cari Tanggal Journal">
+        <span class="calendar-icon">📅</span>
+      </div>
+
+      <section class="content">
+        <h1>DAFTAR JOURNAL</h1>
+        <p>Kelola Semua Journal Anda</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul</th>
+              <th>Kategori</th>
+              <th>Nama Mahasiswa</th>
+              <th>Tanggal</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td>Magang</td>
+              <td>Magang</td>
+              <td>Fulan</td>
+              <td>07-05-2025</td>
+              <td><span class="status danger">Tidak Valid ▼</span></td>
+              <td><button class="btn edit">✏️</button> <button class="btn view">👁️</button></td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Tugas Akhir</td>
+              <td>Skripsi</td>
+              <td>Fulan</td>
+              <td>07-05-2025</td>
+              <td><span class="status success">Valid ▼</span></td>
+              <td><button class="btn edit">✏️</button> <button class="btn view">👁️</button></td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>Tugas Akhir</td>
+              <td>Skripsi</td>
+              <td>Fulan</td>
+              <td>07-05-2025</td>
+              <td><span class="status neutral">Belum di Review ▼</span></td>
+              <td><button class="btn edit">✏️</button> <button class="btn view">👁️</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer class="footer">
+        <p>All Rights Reserved • Copyright StudentLogbook by RajaCoding 2025 in Yogyakarta</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
