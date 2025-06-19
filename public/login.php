@@ -5,7 +5,7 @@ if (isset($_POST['login'])) {
   login();
 }
 if (isset($_SESSION["login"])) {
-  header("Location: index.php");
+  header("Location: user/journalAnda.php");
   exit;
 }
 ?>
@@ -34,7 +34,7 @@ if (isset($_SESSION["login"])) {
           <span style="color:red;"><?= $errors['password'] ?></span><br>
           <button type="submit" name="login">Login</button>
           <p>
-            Belum Punya Akun? <a href="./registerpage.html">Klik Disini</a>
+            Belum Punya Akun? <a href="register.php">Klik Disini</a>
           </p>
         </form>
       </div>

@@ -8,7 +8,7 @@ function register()
   $data = $_POST;
   global $conn;
   // menghilangkan strip di string
-  $name = htmlspecialchars(string: $data["name"]);
+  $name = htmlspecialchars( $data["name"]);
   $email =  htmlspecialchars($data["email"]);
 
   // memungkinkan user untuk memasukan tanda kutip ke syntax mysql

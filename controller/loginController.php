@@ -14,9 +14,11 @@ function login (){
   }
     
   $result = query("SELECT * FROM user WHERE email = '$email' ");
+
   if (count($result)==1) {
     if (password_verify($password,$result[0]["password"])) {
       $_SESSION["login"] = true;
+      $_SESSION["id"] = $result[0]["id"];
       header("Location: index.php");
     }else{
       $errors['password'] = "Password tidak valid";

@@ -44,7 +44,7 @@ if (isset($_POST["register"])) {
           <input type="password" placeholder="Confirm Password" name="confirm_password" />
           <span style="color:red;"><?= $errors['confirm_password'] ?></span><br>
           <button type="submit" name="register">Daftar</button>
-          <p>Sudah Punya Akun? <a href="./loginpage.html">Masuk</a></p>
+          <p>Sudah Punya Akun? <a href="login.php">Masuk</a></p>
         </form>
       </div>
 
