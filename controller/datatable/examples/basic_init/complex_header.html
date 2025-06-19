@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/ico" href="https://www.datatables.net/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+	<title>DataTables example - Complex headers (rowspan and colspan)</title>
+	<link rel="stylesheet" type="text/css" href="../resources/syntax/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../resources/demo.css">
+	<style type="text/css" class="init">
+	
+	</style>
+	<script type="text/javascript" language="javascript" src="../resources/syntax/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="../resources/demo.js"></script>
+	<script defer class="init">
+	dt_demo.init({
+		libs: {"targetFramework":"","js":["jquery","datatables"],"css":["datatables"],"components":{"datatables":{"css":"..\/..\/css","js":"..\/..\/js","resolve":true},"autofill":{"css":"..\/..\/..\/extensions\/AutoFill\/css","js":"..\/..\/..\/extensions\/AutoFill\/js","resolve":true},"buttons":{"css":"..\/..\/..\/extensions\/Buttons\/css","js":"..\/..\/..\/extensions\/Buttons\/js","resolve":true},"colreorder":{"css":"..\/..\/..\/extensions\/ColReorder\/css","js":"..\/..\/..\/extensions\/ColReorder\/js","resolve":true},"columncontrol":{"css":"..\/..\/..\/extensions\/ColumnControl\/css","js":"..\/..\/..\/extensions\/ColumnControl\/js","resolve":true},"editor":{"css":"..\/..\/css","js":"..\/..\/js","resolve":true},"fixedcolumns":{"css":"..\/..\/..\/extensions\/FixedColumns\/css","js":"..\/..\/..\/extensions\/FixedColumns\/js","resolve":true},"fixedheader":{"css":"..\/..\/..\/extensions\/FixedHeader\/css","js":"..\/..\/..\/extensions\/FixedHeader\/js","resolve":true},"keytable":{"css":"..\/..\/..\/extensions\/KeyTable\/css","js":"..\/..\/..\/extensions\/KeyTable\/js","resolve":true},"responsive":{"css":"..\/..\/..\/extensions\/Responsive\/css","js":"..\/..\/..\/extensions\/Responsive\/js","resolve":true},"rowgroup":{"css":"..\/..\/..\/extensions\/RowGroup\/css","js":"..\/..\/..\/extensions\/RowGroup\/js","resolve":true},"rowreorder":{"css":"..\/..\/..\/extensions\/RowReorder\/css","js":"..\/..\/..\/extensions\/RowReorder\/js","resolve":true},"scroller":{"css":"..\/..\/..\/extensions\/Scroller\/css","js":"..\/..\/..\/extensions\/Scroller\/js","resolve":true},"select":{"css":"..\/..\/..\/extensions\/Select\/css","js":"..\/..\/..\/extensions\/Select\/js","resolve":true},"searchbuilder":{"css":"..\/..\/..\/extensions\/SearchBuilder\/css","js":"..\/..\/..\/extensions\/SearchBuilder\/js","resolve":true},"searchpanes":{"css":"..\/..\/..\/extensions\/SearchPanes\/css","js":"..\/..\/..\/extensions\/SearchPanes\/js","resolve":true},"staterestore":{"css":"..\/..\/..\/extensions\/StateRestore\/css","js":"..\/..\/..\/extensions\/StateRestore\/js","resolve":true},"datetime":{"css":"..\/..\/..\/extensions\/DateTime\/css\/dataTables.dateTime.css","js":"..\/..\/..\/extensions\/DateTime\/js\/dataTables.dateTime.js"},"bootstrap":{"css":"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/css\/bootstrap.min.css","js":"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/js\/bootstrap.min.js"},"bootstrap4":{"css":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/4.5.2\/css\/bootstrap.css","js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/popper.js\/1.14.3\/umd\/popper.min.js|https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/4.5.2\/js\/bootstrap.min.js"},"bootstrap5":{"css":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/5.3.3\/css\/bootstrap.min.css","js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/5.3.3\/js\/bootstrap.bundle.min.js"},"bulma":{"css":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/bulma\/1.0.3\/css\/bulma.min.css"},"foundation":{"css":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/foundation\/6.4.3\/css\/foundation.min.css","js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/foundation\/6.4.3\/js\/foundation.min.js"},"jqueryui":{"css":"https:\/\/code.jquery.com\/ui\/1.13.2\/themes\/base\/jquery-ui.css","js":"https:\/\/code.jquery.com\/ui\/1.13.2\/jquery-ui.js"},"material":{"css":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/material-components-web\/14.0.0\/material-components-web.min.css","js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/material-components-web\/14.0.0\/material-components-web.min.js"},"semanticui":{"css":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/fomantic-ui\/2.9.2\/semantic.min.css","js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/fomantic-ui\/2.9.2\/semantic.min.js"},"uikit":{"css":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/uikit\/3.0.2\/css\/uikit.min.css","js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/uikit\/3.0.2\/js\/uikit.min.js"},"tailwindcss":{"css":"","js":"https:\/\/cdn.tailwindcss.com"},"font-awesome":{"css":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.7.0\/css\/font-awesome.min.css"},"world-flags-sprite":{"css":"https:\/\/cdn.jsdelivr.net\/gh\/lafeber\/world-flags-sprite\/stylesheets\/flags32-both.css"},"demo":{"css":"..\/resources\/demo.css","js":"..\/resources\/demo.js"},"syntax":{"css":"..\/resources\/syntax\/shCore.css","js":"..\/resources\/syntax\/shCore.js"},"buttons-html5":{"js":"..\/..\/..\/extensions\/Buttons\/js\/buttons.html5.js"},"buttons-print":{"js":"..\/..\/..\/extensions\/Buttons\/js\/buttons.print.js"},"buttons-colvis":{"js":"..\/..\/..\/extensions\/Buttons\/js\/buttons.colVis.js"},"jquery":{"js":"https:\/\/code.jquery.com\/jquery-3.7.1.js"},"jszip":{"js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jszip\/3.10.1\/jszip.min.js"},"pdfmake":{"js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/pdfmake\/0.2.7\/pdfmake.min.js"},"vfsfonts":{"js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/pdfmake\/0.2.7\/vfs_fonts.js"},"moment":{"js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/moment.js\/2.29.2\/moment.min.js"},"luxon":{"js":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/luxon\/2.3.1\/luxon.min.js"},"sparkline":{"js":"https:\/\/cdn.jsdelivr.net\/gh\/fnando\/sparkline\/dist\/sparkline.js"}}},
+		jquery: function () {
+				
+
+$('#example').DataTable();
+
+
+		},
+		vanilla: function () {
+				
+
+new DataTable('#example');
+
+
+		}
+	});
+	</script>
+</head>
+<body class="dt-example">
+	<div class="container">
+		<section>
+			<h1>DataTables example <span>Complex headers (rowspan and colspan)</span></h1>
+			<div class="info">
+				<p>When using tables to display data, you will often wish to display column information in groups. DataTables fully supports <code>colspan</code> and
+				<code>rowspan</code> in the table's header, assigning the required order listeners to the <code class="tag" title="HTML tag">th</code> cells suitable for the
+				columns the element covers.</p>
+				<p>As of DataTables 2, columns do not require their own unique header cell as was the case with DataTables 1.x - multiple columns can share a single
+				<code>colspan</code> element, as shown in the example below. Only the <em>Name</em> column has a cell unique to it. Furthermore, when activating ordering on a
+				<code>colspan</code> cell, it will automatically enable multi-column ordering for the applicable columns.</p>
+				<p>DataTables will automatically apply ordering listeners and icons to all cells in the table header. If you wish to disable this, you can use the <a href=
+				"//datatables.net/reference/option/titleRow"><code class="option" title="DataTables initialisation option">titleRow</code></a> option to tell DataTables which row
+				to apply the ordering controls to, or use the <code>data-dt-order</code> property on the <code class="tag" title="HTML tag">th/td</code> cells in the table header.
+				The value of this attribute (if present, it is entirely optional) controls the ordering listeners and icons:</p>
+				<ul class="markdown">
+					<li><code>data-dt-order="disable"</code> - Ordering listeners will not be attached to these cells, nor will ordering status icons be shown.</li>
+					<li><code>data-dt-order="icon-only"</code> - Ordering listeners will not be attached to these cells, but the ordering status icons <em>will</em> be shown.</li>
+				</ul>
+				<p>If not defined, the cell will have an ordering listener attached and status icons shown (<em>unless</em> disabled with the <a href=
+				"//datatables.net/reference/option/columns.orderable"><code class="option" title="DataTables initialisation option">columns.orderable</code></a> option). See the
+				<a href="//datatables.net/reference/option/columns.orderable"><code class="option" title="DataTables initialisation option">columns.orderable</code></a> option for
+				more details.</p>
+				<p>In the example below, the <em>HR info</em> has <code>data-dt-order="disable"</code> applied to it. The other cells in the header are all clickable and have
+				ordering status icons shown.</p>
+			</div>
+			<div class="demo-html">
+				<table id="example" class="display">
+					<thead>
+						<tr>
+							<th rowspan="2" width="15%">Name</th>
+							<th colspan="2">Position</th>
+							<th colspan="3">Contact</th>
+						</tr>
+						<tr>
+							<th colspan="3" data-dt-order="disable">HR info</th>
+							<th colspan="2">Direct</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>$320,800</td>
+							<td>Edinburgh</td>
+							<td>5421</td>
+							<td>t.nixon@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>$170,750</td>
+							<td>Tokyo</td>
+							<td>8422</td>
+							<td>g.winters@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Ashton Cox</td>
+							<td>Junior Technical Author</td>
+							<td>$86,000</td>
+							<td>San Francisco</td>
+							<td>1562</td>
+							<td>a.cox@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Cedric Kelly</td>
+							<td>Senior Javascript Developer</td>
+							<td>$433,060</td>
+							<td>Edinburgh</td>
+							<td>6224</td>
+							<td>c.kelly@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Airi Satou</td>
+							<td>Accountant</td>
+							<td>$162,700</td>
+							<td>Tokyo</td>
+							<td>5407</td>
+							<td>a.satou@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>Integration Specialist</td>
+							<td>$372,000</td>
+							<td>New York</td>
+							<td>4804</td>
+							<td>b.williamson@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Herrod Chandler</td>
+							<td>Sales Assistant</td>
+							<td>$137,500</td>
+							<td>San Francisco</td>
+							<td>9608</td>
+							<td>h.chandler@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Rhona Davidson</td>
+							<td>Integration Specialist</td>
+							<td>$327,900</td>
+							<td>Tokyo</td>
+							<td>6200</td>
+							<td>r.davidson@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Colleen Hurst</td>
+							<td>Javascript Developer</td>
+							<td>$205,500</td>
+							<td>San Francisco</td>
+							<td>2360</td>
+							<td>c.hurst@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Sonya Frost</td>
+							<td>Software Engineer</td>
+							<td>$103,600</td>
+							<td>Edinburgh</td>
+							<td>1667</td>
+							<td>s.frost@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Jena Gaines</td>
+							<td>Office Manager</td>
+							<td>$90,560</td>
+							<td>London</td>
+							<td>3814</td>
+							<td>j.gaines@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Quinn Flynn</td>
+							<td>Support Lead</td>
+							<td>$342,000</td>
+							<td>Edinburgh</td>
+							<td>9497</td>
+							<td>q.flynn@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Charde Marshall</td>
+							<td>Regional Director</td>
+							<td>$470,600</td>
+							<td>San Francisco</td>
+							<td>6741</td>
+							<td>c.marshall@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Haley Kennedy</td>
+							<td>Senior Marketing Designer</td>
+							<td>$313,500</td>
+							<td>London</td>
+							<td>3597</td>
+							<td>h.kennedy@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Tatyana Fitzpatrick</td>
+							<td>Regional Director</td>
+							<td>$385,750</td>
+							<td>London</td>
+							<td>1965</td>
+							<td>t.fitzpatrick@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Michael Silva</td>
+							<td>Marketing Designer</td>
+							<td>$198,500</td>
+							<td>London</td>
+							<td>1581</td>
+							<td>m.silva@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Paul Byrd</td>
+							<td>Chief Financial Officer (CFO)</td>
+							<td>$725,000</td>
+							<td>New York</td>
+							<td>3059</td>
+							<td>p.byrd@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Gloria Little</td>
+							<td>Systems Administrator</td>
+							<td>$237,500</td>
+							<td>New York</td>
+							<td>1721</td>
+							<td>g.little@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Bradley Greer</td>
+							<td>Software Engineer</td>
+							<td>$132,000</td>
+							<td>London</td>
+							<td>2558</td>
+							<td>b.greer@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Dai Rios</td>
+							<td>Personnel Lead</td>
+							<td>$217,500</td>
+							<td>Edinburgh</td>
+							<td>2290</td>
+							<td>d.rios@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Jenette Caldwell</td>
+							<td>Development Lead</td>
+							<td>$345,000</td>
+							<td>New York</td>
+							<td>1937</td>
+							<td>j.caldwell@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Yuri Berry</td>
+							<td>Chief Marketing Officer (CMO)</td>
+							<td>$675,000</td>
+							<td>New York</td>
+							<td>6154</td>
+							<td>y.berry@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Caesar Vance</td>
+							<td>Pre-Sales Support</td>
+							<td>$106,450</td>
+							<td>New York</td>
+							<td>8330</td>
+							<td>c.vance@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Doris Wilder</td>
+							<td>Sales Assistant</td>
+							<td>$85,600</td>
+							<td>Sydney</td>
+							<td>3023</td>
+							<td>d.wilder@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Angelica Ramos</td>
+							<td>Chief Executive Officer (CEO)</td>
+							<td>$1,200,000</td>
+							<td>London</td>
+							<td>5797</td>
+							<td>a.ramos@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Gavin Joyce</td>
+							<td>Developer</td>
+							<td>$92,575</td>
+							<td>Edinburgh</td>
+							<td>8822</td>
+							<td>g.joyce@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Jennifer Chang</td>
+							<td>Regional Director</td>
+							<td>$357,650</td>
+							<td>Singapore</td>
+							<td>9239</td>
+							<td>j.chang@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Brenden Wagner</td>
+							<td>Software Engineer</td>
+							<td>$206,850</td>
+							<td>San Francisco</td>
+							<td>1314</td>
+							<td>b.wagner@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Fiona Green</td>
+							<td>Chief Operating Officer (COO)</td>
+							<td>$850,000</td>
+							<td>San Francisco</td>
+							<td>2947</td>
+							<td>f.green@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Shou Itou</td>
+							<td>Regional Marketing</td>
+							<td>$163,000</td>
+							<td>Tokyo</td>
+							<td>8899</td>
+							<td>s.itou@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Michelle House</td>
+							<td>Integration Specialist</td>
+							<td>$95,400</td>
+							<td>Sydney</td>
+							<td>2769</td>
+							<td>m.house@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Suki Burks</td>
+							<td>Developer</td>
+							<td>$114,500</td>
+							<td>London</td>
+							<td>6832</td>
+							<td>s.burks@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Prescott Bartlett</td>
+							<td>Technical Author</td>
+							<td>$145,000</td>
+							<td>London</td>
+							<td>3606</td>
+							<td>p.bartlett@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Gavin Cortez</td>
+							<td>Team Leader</td>
+							<td>$235,500</td>
+							<td>San Francisco</td>
+							<td>2860</td>
+							<td>g.cortez@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Martena Mccray</td>
+							<td>Post-Sales support</td>
+							<td>$324,050</td>
+							<td>Edinburgh</td>
+							<td>8240</td>
+							<td>m.mccray@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Unity Butler</td>
+							<td>Marketing Designer</td>
+							<td>$85,675</td>
+							<td>San Francisco</td>
+							<td>5384</td>
+							<td>u.butler@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Howard Hatfield</td>
+							<td>Office Manager</td>
+							<td>$164,500</td>
+							<td>San Francisco</td>
+							<td>7031</td>
+							<td>h.hatfield@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Hope Fuentes</td>
+							<td>Secretary</td>
+							<td>$109,850</td>
+							<td>San Francisco</td>
+							<td>6318</td>
+							<td>h.fuentes@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Vivian Harrell</td>
+							<td>Financial Controller</td>
+							<td>$452,500</td>
+							<td>San Francisco</td>
+							<td>9422</td>
+							<td>v.harrell@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Timothy Mooney</td>
+							<td>Office Manager</td>
+							<td>$136,200</td>
+							<td>London</td>
+							<td>7580</td>
+							<td>t.mooney@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Jackson Bradshaw</td>
+							<td>Director</td>
+							<td>$645,750</td>
+							<td>New York</td>
+							<td>1042</td>
+							<td>j.bradshaw@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Olivia Liang</td>
+							<td>Support Engineer</td>
+							<td>$234,500</td>
+							<td>Singapore</td>
+							<td>2120</td>
+							<td>o.liang@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Bruno Nash</td>
+							<td>Software Engineer</td>
+							<td>$163,500</td>
+							<td>London</td>
+							<td>6222</td>
+							<td>b.nash@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Sakura Yamamoto</td>
+							<td>Support Engineer</td>
+							<td>$139,575</td>
+							<td>Tokyo</td>
+							<td>9383</td>
+							<td>s.yamamoto@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Thor Walton</td>
+							<td>Developer</td>
+							<td>$98,540</td>
+							<td>New York</td>
+							<td>8327</td>
+							<td>t.walton@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Finn Camacho</td>
+							<td>Support Engineer</td>
+							<td>$87,500</td>
+							<td>San Francisco</td>
+							<td>2927</td>
+							<td>f.camacho@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Serge Baldwin</td>
+							<td>Data Coordinator</td>
+							<td>$138,575</td>
+							<td>Singapore</td>
+							<td>8352</td>
+							<td>s.baldwin@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Zenaida Frank</td>
+							<td>Software Engineer</td>
+							<td>$125,250</td>
+							<td>New York</td>
+							<td>7439</td>
+							<td>z.frank@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Zorita Serrano</td>
+							<td>Software Engineer</td>
+							<td>$115,000</td>
+							<td>San Francisco</td>
+							<td>4389</td>
+							<td>z.serrano@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Jennifer Acosta</td>
+							<td>Junior Javascript Developer</td>
+							<td>$75,650</td>
+							<td>Edinburgh</td>
+							<td>3431</td>
+							<td>j.acosta@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Cara Stevens</td>
+							<td>Sales Assistant</td>
+							<td>$145,600</td>
+							<td>New York</td>
+							<td>3990</td>
+							<td>c.stevens@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Hermione Butler</td>
+							<td>Regional Director</td>
+							<td>$356,250</td>
+							<td>London</td>
+							<td>1016</td>
+							<td>h.butler@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Lael Greer</td>
+							<td>Systems Administrator</td>
+							<td>$103,500</td>
+							<td>London</td>
+							<td>6733</td>
+							<td>l.greer@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Jonas Alexander</td>
+							<td>Developer</td>
+							<td>$86,500</td>
+							<td>San Francisco</td>
+							<td>8196</td>
+							<td>j.alexander@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Shad Decker</td>
+							<td>Regional Director</td>
+							<td>$183,000</td>
+							<td>Edinburgh</td>
+							<td>6373</td>
+							<td>s.decker@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Michael Bruce</td>
+							<td>Javascript Developer</td>
+							<td>$183,000</td>
+							<td>Singapore</td>
+							<td>5384</td>
+							<td>m.bruce@datatables.net</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>$112,000</td>
+							<td>New York</td>
+							<td>4226</td>
+							<td>d.snider@datatables.net</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Salary</th>
+							<th>Office</th>
+							<th>Extn.</th>
+							<th>E-mail</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<ul class="dt-tabs">
+				<li class="active">Javascript</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Ajax</li>
+				<li>Server-side script</li>
+			</ul>
+			<div class="dt-tabs">
+				<div class="js">
+					<p>The Javascript shown below is used to initialise the table shown in this example:</p>
+					<div id="js-jquery">
+						<code class="multiline language-js">$(&#039;#example&#039;).DataTable();</code>
+					</div>
+					<div id="js-vanilla">
+						<code class="multiline language-js">new DataTable(&#039;#example&#039;);</code>
+					</div>
+					<p>In addition to the above code, the following Javascript library files are loaded for use in this example:</p>
+					<ul id="js-lib-files"></ul>
+				</div>
+				<div class="table">
+					<p>The HTML shown below is the raw HTML table element, before it has been enhanced by DataTables:</p>
+				</div>
+				<div class="css">
+					<div>
+						<p>This example uses a little bit of additional CSS beyond what is loaded from the library files (below), in order to correctly display the table. The
+						additional CSS used is shown below:</p><code class="multiline language-css"></code>
+					</div>
+					<p>The following CSS library files are loaded for use in this example to provide the styling of the table:</p>
+					<ul id="css-lib-files"></ul>
+				</div>
+				<div class="ajax">
+					<p>This table loads data by Ajax. The latest data that has been loaded is shown below. This data will update automatically as any additional data is
+					loaded.</p>
+				</div>
+				<div class="php">
+					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+					documentation</a>.</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<section>
+		<div class="footer">
+			<div class="gradient"></div>
+			<div class="liner">
+				<h2>Other examples</h2>
+				<div class="toc">
+					<div class="toc-group">
+						<h3><a href="./index.html">Basic initialisation</a></h3>
+						<ul class="toc active">
+							<li>
+								<a href="./zero_configuration.html">Zero configuration</a>
+							</li>
+							<li>
+								<a href="./filter_only.html">Feature enable / disable</a>
+							</li>
+							<li>
+								<a href="./table_sorting.html">Default ordering (sorting)</a>
+							</li>
+							<li>
+								<a href="./multi_col_sort.html">Multi-column ordering</a>
+							</li>
+							<li>
+								<a href="./multiple_tables.html">Multiple tables</a>
+							</li>
+							<li>
+								<a href="./hidden_columns.html">Hidden columns</a>
+							</li>
+							<li class="active">
+								<a href="./complex_header.html">Complex headers (rowspan and colspan)</a>
+							</li>
+							<li>
+								<a href="./flexible_width.html">Flexible table width</a>
+							</li>
+							<li>
+								<a href="./state_save.html">State saving</a>
+							</li>
+							<li>
+								<a href="./alt_pagination.html">Alternative pagination</a>
+							</li>
+							<li>
+								<a href="./data_rendering.html">Data rendering</a>
+							</li>
+							<li>
+								<a href="./scroll_y.html">Scroll - vertical</a>
+							</li>
+							<li>
+								<a href="./scroll_y_dynamic.html">Scroll - vertical, dynamic height</a>
+							</li>
+							<li>
+								<a href="./scroll_x.html">Scroll - horizontal</a>
+							</li>
+							<li>
+								<a href="./scroll_xy.html">Scroll - horizontal and vertical</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../advanced_init/index.html">Advanced initialisation</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../advanced_init/events_live.html">DOM / jQuery events</a>
+							</li>
+							<li>
+								<a href="../advanced_init/dt_events.html">DataTables events</a>
+							</li>
+							<li>
+								<a href="../advanced_init/column_render.html">Column rendering</a>
+							</li>
+							<li>
+								<a href="../advanced_init/enter_search.html">Enter Key to Search</a>
+							</li>
+							<li>
+								<a href="../advanced_init/length_menu.html">Page length options</a>
+							</li>
+							<li>
+								<a href="../advanced_init/complex_header.html">Complex headers with column visibility</a>
+							</li>
+							<li>
+								<a href="../advanced_init/object_dom_read.html">Read HTML to data objects</a>
+							</li>
+							<li>
+								<a href="../advanced_init/html5-data-attributes.html">HTML5 data-* attributes - cell data</a>
+							</li>
+							<li>
+								<a href="../advanced_init/html5-data-options.html">HTML5 data-* attributes - table options</a>
+							</li>
+							<li>
+								<a href="../advanced_init/defaults.html">Setting defaults</a>
+							</li>
+							<li>
+								<a href="../advanced_init/row_callback.html">Row created callback</a>
+							</li>
+							<li>
+								<a href="../advanced_init/row_grouping.html">Row grouping</a>
+							</li>
+							<li>
+								<a href="../advanced_init/footer_callback.html">Footer callback</a>
+							</li>
+							<li>
+								<a href="../advanced_init/sort_direction_control.html">Order direction sequence control</a>
+							</li>
+							<li>
+								<a href="../advanced_init/dom_elements.html">DOM element return from renderer</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../data_sources/index.html">Data sources</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../data_sources/dom.html">HTML (DOM) sourced data</a>
+							</li>
+							<li>
+								<a href="../data_sources/ajax.html">Ajax sourced data</a>
+							</li>
+							<li>
+								<a href="../data_sources/js_array.html">Javascript sourced data</a>
+							</li>
+							<li>
+								<a href="../data_sources/server_side.html">Server-side processing</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../i18n/index.html">Language and Internationalisation</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../i18n/entries.html">Language - display data type</a>
+							</li>
+							<li>
+								<a href="../i18n/datetime.html">Auto-locale display</a>
+							</li>
+							<li>
+								<a href="../i18n/numbers.html">Locale based number display</a>
+							</li>
+							<li>
+								<a href="../i18n/auto-render.html">Language - auto render</a>
+							</li>
+							<li>
+								<a href="../i18n/options.html">Language options</a>
+							</li>
+							<li>
+								<a href="../i18n/comma-decimal.html">Language - Comma decimal place</a>
+							</li>
+							<li>
+								<a href="../i18n/rtl.html">Right-to-left language support</a>
+							</li>
+							<li>
+								<a href="../i18n/ajax.html">Remote language file</a>
+							</li>
+							<li>
+								<a href="../i18n/ajax+local.html">Remote language file + local definitions</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../datetime/index.html">DateTime</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../datetime/iso8601.html">ISO8601 detection</a>
+							</li>
+							<li>
+								<a href="../datetime/auto-locale-moment.html">Auto-locale display (Moment.js)</a>
+							</li>
+							<li>
+								<a href="../datetime/auto-locale-luxon.html">Auto-locale display (Luxon)</a>
+							</li>
+							<li>
+								<a href="../datetime/formatting-moment.html">Date rendering (Moment.js)</a>
+							</li>
+							<li>
+								<a href="../datetime/formatting-luxon.html">Date rendering (Luxon)</a>
+							</li>
+							<li>
+								<a href="../datetime/transform-moment.html">Format transform (Moment.js)</a>
+							</li>
+							<li>
+								<a href="../datetime/transform-luxon.html">Format transform (Luxon)</a>
+							</li>
+							<li>
+								<a href="../datetime/order-moment.html">Ordering formatted dates (Moment.js)</a>
+							</li>
+							<li>
+								<a href="../datetime/order-luxon.html">Ordering formatted dates (Luxon)</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../plug-ins/index.html">Plug-ins</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../plug-ins/api.html">API plug-in methods</a>
+							</li>
+							<li>
+								<a href="../plug-ins/sorting_auto.html">Ordering plug-ins (with type detection)</a>
+							</li>
+							<li>
+								<a href="../plug-ins/sorting_manual.html">Ordering plug-ins (no type detection)</a>
+							</li>
+							<li>
+								<a href="../plug-ins/range_filtering.html">Custom filtering - range search</a>
+							</li>
+							<li>
+								<a href="../plug-ins/dom_sort.html">Live DOM ordering</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../styling/index.html">Styling</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../styling/display.html">Base style</a>
+							</li>
+							<li>
+								<a href="../styling/no-classes.html">Base style - no styling classes</a>
+							</li>
+							<li>
+								<a href="../styling/cell-border.html">Base style - cell borders</a>
+							</li>
+							<li>
+								<a href="../styling/compact.html">Base style - compact</a>
+							</li>
+							<li>
+								<a href="../styling/hover.html">Base style - hover</a>
+							</li>
+							<li>
+								<a href="../styling/order-column.html">Base style - order-column</a>
+							</li>
+							<li>
+								<a href="../styling/row-border.html">Base style - row borders</a>
+							</li>
+							<li>
+								<a href="../styling/stripe.html">Base style - stripe</a>
+							</li>
+							<li>
+								<a href="../styling/bootstrap.html">Bootstrap 3</a>
+							</li>
+							<li>
+								<a href="../styling/bootstrap4.html">Bootstrap 4</a>
+							</li>
+							<li>
+								<a href="../styling/bootstrap5.html">Bootstrap 5</a>
+							</li>
+							<li>
+								<a href="../styling/foundation.html">Foundation</a>
+							</li>
+							<li>
+								<a href="../styling/semanticui.html">Fomantic-UI (formally Semantic-UI)</a>
+							</li>
+							<li>
+								<a href="../styling/bulma.html">Bulma</a>
+							</li>
+							<li>
+								<a href="../styling/jqueryUI.html">jQuery UI ThemeRoller</a>
+							</li>
+							<li>
+								<a href="../styling/material.html">Material Design (Tech. preview)</a>
+							</li>
+							<li>
+								<a href="../styling/tailwind.html">Tailwind CSS (Tech. preview)</a>
+							</li>
+							<li>
+								<a href="../styling/uikit.html">UIKit 3 (Tech. preview)</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../layout/index.html">Layout</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../layout/positioning.html">Table controls positioning</a>
+							</li>
+							<li>
+								<a href="../layout/positioning-with-options.html">Table controls positioning with options</a>
+							</li>
+							<li>
+								<a href="../layout/grid.html">Grid layout</a>
+							</li>
+							<li>
+								<a href="../layout/ids-and-classes.html">Element IDs and classes</a>
+							</li>
+							<li>
+								<a href="../layout/dom_multiple_elements.html">Multiple table control elements</a>
+							</li>
+							<li>
+								<a href="../layout/custom-nodes.html">Custom controls - nodes</a>
+							</li>
+							<li>
+								<a href="../layout/custom-function.html">Custom controls - defined by functions</a>
+							</li>
+							<li>
+								<a href="../layout/custom-plugin.html">Custom controls - plug-ins</a>
+							</li>
+							<li>
+								<a href="../layout/dom.html">Legacy dom option</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../api/index.html">API</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../api/add_row.html">Add rows</a>
+							</li>
+							<li>
+								<a href="../api/multi_filter.html">Individual column searching (text inputs)</a>
+							</li>
+							<li>
+								<a href="../api/multi_filter_select.html">Individual column searching (select inputs)</a>
+							</li>
+							<li>
+								<a href="../api/highlight.html">Highlighting rows and columns</a>
+							</li>
+							<li>
+								<a href="../api/row_details.html">Child rows (show extra / detailed information)</a>
+							</li>
+							<li>
+								<a href="../api/row_details_stateSave.html">Child rows with StateSave</a>
+							</li>
+							<li>
+								<a href="../api/select_row.html">Row selection (multiple rows)</a>
+							</li>
+							<li>
+								<a href="../api/select_single_row.html">Row selection and deletion (single row)</a>
+							</li>
+							<li>
+								<a href="../api/form.html">Form inputs</a>
+							</li>
+							<li>
+								<a href="../api/counter_columns.html">Index column</a>
+							</li>
+							<li>
+								<a href="../api/show_hide.html">Show / hide columns dynamically</a>
+							</li>
+							<li>
+								<a href="../api/api_in_init.html">Using API in callbacks</a>
+							</li>
+							<li>
+								<a href="../api/tabs_and_scrolling.html">Scrolling and Bootstrap tabs</a>
+							</li>
+							<li>
+								<a href="../api/regex.html">Search API (regular expressions)</a>
+							</li>
+							<li>
+								<a href="../api/highcharts.html">HighCharts Integration</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../ajax/index.html">Ajax</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../ajax/simple.html">Ajax data source (arrays)</a>
+							</li>
+							<li>
+								<a href="../ajax/objects.html">Ajax data source (objects)</a>
+							</li>
+							<li>
+								<a href="../ajax/deep.html">Nested object data (objects)</a>
+							</li>
+							<li>
+								<a href="../ajax/objects_subarrays.html">Nested object data (arrays)</a>
+							</li>
+							<li>
+								<a href="../ajax/orthogonal-data.html">Orthogonal data</a>
+							</li>
+							<li>
+								<a href="../ajax/null_data_source.html">Generated content for a column</a>
+							</li>
+							<li>
+								<a href="../ajax/custom_data_property.html">Custom data source property</a>
+							</li>
+							<li>
+								<a href="../ajax/custom_data_flat.html">Flat array data source</a>
+							</li>
+							<li>
+								<a href="../ajax/defer_render.html">Deferred rendering feature</a>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-group">
+						<h3><a href="../server_side/index.html">Server-side</a></h3>
+						<ul class="toc">
+							<li>
+								<a href="../server_side/simple.html">Server-side processing</a>
+							</li>
+							<li>
+								<a href="../server_side/custom_vars.html">Custom HTTP variables</a>
+							</li>
+							<li>
+								<a href="../server_side/post.html">POST data</a>
+							</li>
+							<li>
+								<a href="../server_side/return_search.html">Return key to search</a>
+							</li>
+							<li>
+								<a href="../server_side/ids.html">Automatic addition of row ID attributes</a>
+							</li>
+							<li>
+								<a href="../server_side/object_data.html">Object data source</a>
+							</li>
+							<li>
+								<a href="../server_side/row_details.html">Row details</a>
+							</li>
+							<li>
+								<a href="../server_side/jsonp.html">JSONP data source for remote domains</a>
+							</li>
+							<li>
+								<a href="../server_side/defer_loading.html">Deferred loading of data</a>
+							</li>
+							<li>
+								<a href="../server_side/pipeline.html">Pipelining data to reduce Ajax calls for paging</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="epilogue">
+					<p>Please refer to the <a href="https://www.datatables.net">DataTables documentation</a> for full information about its API properties and methods.<br>
+					Additionally, there are a wide range of <a href="https://www.datatables.net/extensions">extensions</a> and <a href=
+					"https://www.datatables.net/plug-ins">plug-ins</a> which extend the capabilities of DataTables.</p>
+					<p class="copyright">DataTables designed and created by <a href="https://www.sprymedia.co.uk">SpryMedia Ltd</a> © 2007-2025<br>
+					DataTables is licensed under the <a href="https://www.datatables.net/mit">MIT license</a>.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
