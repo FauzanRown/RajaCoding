@@ -9,8 +9,8 @@ $("#summernote").summernote({
     ["color", ["color"]],
     ["para", ["ul", "ol", "paragraph"]],
     ["table", ["table"]],
-    ["insert", ["link", "picture", "video"]],
-    ["view", ["fullscreen", "codeview", "help"]],
+    ["insert", []],
+    ["view", ["fullscreen","help"]],
   ],
 });
 
