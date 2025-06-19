@@ -19,3 +19,7 @@ $rows[] = $row;
 }
 return $rows;
 }
+function getUser($idUser){
+  $userData=query("SELECT name,role,image,email FROM user WHERE id = $idUser");
+  return $userData;
+}
