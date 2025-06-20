@@ -24,10 +24,20 @@ body {
   text-align: center;
 }
 
+.logo-wrapper {
+  text-decoration: none;
+  color: inherit;
+}
+
 .sidebar .logo {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .profile-img {
@@ -50,9 +60,9 @@ body {
   text-decoration: none;
   padding: 10px;
   border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-.menu a.active,
 .menu a:hover {
   background-color: #3b82f6;
 }
@@ -68,7 +78,7 @@ body {
 .search-bar {
   display: flex;
   align-items: center;
-  background: #eef2ff;
+  background: #fbfff9;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 20px;
