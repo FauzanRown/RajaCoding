@@ -288,3 +288,45 @@ footer {
   font-size: 28px;
   margin-top: 20px;
 }
+
+.status-dropdown {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  width: 140px;
+}
+
+.status-dropdown:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.btn.edit {
+  background-color: #facc15;
+}
+
+.btn.delete {
+  background-color: #0ea5e9;
+}
+
+.btn.edit:hover {
+  background-color: #eab308;
+}
+
+.btn.delete:hover {
+  background-color: #0284c7;
+}
