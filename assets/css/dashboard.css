@@ -319,7 +319,7 @@ footer {
   background-color: #facc15;
 }
 
-.btn.delete {
+.btn.view {
   background-color: #0ea5e9;
 }
 
@@ -327,6 +327,6 @@ footer {
   background-color: #eab308;
 }
 
-.btn.delete:hover {
+.btn.view:hover {
   background-color: #0284c7;
 }
