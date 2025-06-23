@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Daftar Dosen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <img class="logo" src="../../assets/img/Logo Putih.png" alt="Logo" />
+        <div class="profile">
+          <img src="../../assets/img/user.png" alt="Foto Admin" />
+          <h1>Admin</h1>
+          <p>Administrator</p>
+        </div>
+        <div class="actionButton">
+          <a href="./listMahasiswa.html" class="btn-link">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="white"/>
+            </svg>
+            <p>Daftar User</p>
+          </a>
+          <a href="./listDosen.html" class="btn-link btn-active">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="white"/>
+            </svg>
+            <p>Daftar Dosen</p>
+          </a>
+          <a href="../../index.html" class="btn-link">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.09 15.59L12.67 13H3V11H12.67L10.09 8.41L11.5 7L16.5 12L11.5 17L10.09 15.59ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z" fill="white"/>
+            </svg>
+            <p>Keluar</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Konten Utama -->
+      <div id="content">
+        <div class="searchBar">
+          <input type="search" placeholder="Cari Dosen..." />
+        </div>
+
+        <div class="form-container">
+          <h1>DAFTAR DOSEN</h1>
+          <p>Kelola Semua Data Dosen</p>
+
+          <div class="mb-3">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalTambahDosen">Tambah Dosen</button>
+          </div>
+
+          <table id="dosenTable" class="table table-striped">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Dr. Sutrisno</td>
+                <td>sutrisno@uad.ac.id</td>
+                <td>Dosen</td>
+                <td>
+                  <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditDosen" onclick="setEditDosen('Dr. Sutrisno', 'sutrisno@uad.ac.id')">Edit</button>
+                  <button class="btn btn-sm btn-danger">Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Bu Rina</td>
+                <td>rina@uad.ac.id</td>
+                <td>Dosen</td>
+                <td>
+                  <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditDosen" onclick="setEditDosen('Bu Rina', 'rina@uad.ac.id')">Edit</button>
+                  <button class="btn btn-sm btn-danger">Hapus</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="copyright">
+          All Rights Reserved • Copyright StudentLogbook by RajaCoding 2025 in Yogyakarta
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal Tambah Dosen -->
+    <div class="modal fade" id="modalTambahDosen" tabindex="-1" aria-labelledby="modalLabelDosen" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content p-3">
+          <div class="modal-header">
+            <p class="modal-title fw-bold" id="modalLabelDosen">Tambah Dosen</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="mb-2">
+                <label for="namaDosen" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="namaDosen" required />
+              </div>
+              <div class="mb-2">
+                <label for="emailDosen" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailDosen" required />
+              </div>
+              <div class="mb-2">
+                <label for="passwordDosen" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordDosen" required />
+              </div>
+              <div class="mb-2">
+                <label for="roleDosen" class="form-label">Role</label>
+                <select class="form-select" id="roleDosen">
+                  <option value="dosen">Dosen</option>
+                  <option value="user">User</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Edit Dosen -->
+    <div class="modal fade" id="modalEditDosen" tabindex="-1" aria-labelledby="modalEditLabelDosen" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content p-3">
+          <div class="modal-header">
+            <p class="modal-title fw-bold" id="modalEditLabelDosen">Edit Dosen</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="mb-2">
+                <label for="editNamaDosen" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="editNamaDosen" required />
+              </div>
+              <div class="mb-2">
+                <label for="editEmailDosen" class="form-label">Email</label>
+                <input type="email" class="form-control" id="editEmailDosen" readonly />
+              </div>
+              <div class="mb-2">
+                <label for="editPasswordDosen" class="form-label">Ubah Password</label>
+                <input type="password" class="form-control" id="editPasswordDosen" />
+                <small class="text-muted">Kosongkan jika tidak ingin mengubah password</small>
+              </div>
+              <div class="mb-2">
+                <label for="editRoleDosen" class="form-label">Role</label>
+                <select class="form-select" id="editRoleDosen">
+                  <option value="dosen">Dosen</option>
+                  <option value="user">User</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Simpan</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.3.1/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.3.1/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/RoleAdmin/listDosen.js"></script>
+  </body>
+</html>
