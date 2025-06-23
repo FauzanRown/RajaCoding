@@ -13,6 +13,7 @@
       href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css"
     />
     <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/modal.css" />
   </head>
   <body>
     <div class="container">
@@ -216,5 +217,33 @@
         </p>
       </div>
     </div>
+
+    <!-- Pop-Up Edit Journal -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Edit Journal <span id="judulModal">[Judul]</span></h3>
+        <label for="revisi">Revisi</label>
+        <input
+          type="text"
+          id="revisi"
+          placeholder="Masukkan catatan revisi..."
+        />
+
+        <label for="statusSelect">Status</label>
+        <select id="statusSelect">
+          <option value="tidak">Tidak Valid</option>
+          <option value="valid">Valid</option>
+          <option value="review">Belum di Review</option>
+        </select>
+
+        <div class="modal-actions">
+          <button id="closeModalBtn">Close</button>
+          <button id="submitModalBtn">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/RoleDosen/editJournalDosen.js"></script>
   </body>
 </html>
