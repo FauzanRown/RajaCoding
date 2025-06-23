@@ -13,6 +13,7 @@
       href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css"
     />
     <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/modal.css" />
   </head>
   <body>
     <div class="container">
@@ -137,9 +138,7 @@
           <p>Kelola Semua Jurnal Anda</p>
 
           <div class="kategori-action">
-            <button class="btn-tambah-kategori">
-              Tambah Kategori
-            </button>
+            <button class="btn-tambah-kategori">Tambah Kategori</button>
           </div>
 
           <table id="example" class="table table-striped">
@@ -188,5 +187,49 @@
         </p>
       </div>
     </div>
+
+    <!-- === POP-UP TAMBAH KATEGORI === -->
+    <div id="modalTambahKategori" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeTambahKategori">&times;</span>
+        <h3>Tambah Kategori</h3>
+
+        <label for="namaKategori">Nama</label>
+        <input
+          type="text"
+          id="namaKategori"
+          placeholder="Masukkan nama kategori..."
+        />
+
+        <div class="modal-actions">
+          <button class="closeModalBtn" id="closeModalBtn">Close</button>
+          <button class="submitModalBtn" id="submitModalBtn">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/RoleDosen/tambahKategoriDosen.js"></script>
+
+    <!-- === POP-UP EDIT KATEGORI === -->
+    <div id="modalEditKategori" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeEditKategori">&times;</span>
+        <h3>Edit Kategori</h3>
+
+        <label for="editNamaKategori">Nama</label>
+        <input
+          type="text"
+          id="editNamaKategori"
+          placeholder="Edit nama kategori..."
+        />
+
+        <div class="modal-actions">
+          <button class="closeModalBtn" id="closeModalEditBtn">Close</button>
+          <button class="submitModalBtn" id="submitModalEditBtn">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/RoleDosen/editKategoriDosen.js"></script>
   </body>
 </html>
