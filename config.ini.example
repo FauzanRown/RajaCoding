@@ -1,5 +1,0 @@
-[database]
-hostname = localhost
-username = root
-password = 
-database = log_book
