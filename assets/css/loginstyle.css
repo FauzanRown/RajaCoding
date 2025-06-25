@@ -24,6 +24,22 @@ body {
   background-color: white;
 }
 
+.back-link {
+  text-align: left;
+  padding: 20px 40px 0;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: #1f7cff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.back-link a:hover {
+  color: #1c71e7;
+}
+
 .content {
   display: flex;
   justify-content: center;
