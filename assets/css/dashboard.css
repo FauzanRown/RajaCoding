@@ -108,12 +108,13 @@ body {
   border-radius: 50px;
   width: 300px;
   height: 35px;
-  color: rgb(255, 255, 255);
-  background-color: transparent;
+  color: #000; /* teks jadi hitam */
+  background-color: #fff; /* background jadi putih */
   text-decoration: none;
-  cursor: pointer;
+  cursor: text;
   margin-left: 20px;
 }
+
 
 .dashboardHeader {
   display: flex;
