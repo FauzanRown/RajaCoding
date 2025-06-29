@@ -1,19 +1,19 @@
 <?php
 
 $userData = getUser($_SESSION["id"])[0];
-
+$currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
 <div id="sidebar">
   <img class="logo" src="../../assets/img/Logo Putih.png" alt="" />
   <div class="profile">
-    <img src="../images/<?= $userData['image'] ?>" alt="" />
+    <img src="<?= $userData['image'] == "user.png" ? "../../assets/img/user.png" : "../images/" . $userData['image'] ?>" alt="" />
     <h1><?= $userData["name"] ?></h1>
     <p><?= $userData["role"] ?></p>
   </div>
 
   <div class="actionButton">
-    <a href="journalAnda.php" class="btn-link btn-active">
+    <a href="journalAnda.php" class="btn-link btn-active <?= $currentPage === 'journalAnda.php' ? 'active' : '' ?>">
       <svg
         width="25"
         height="25"
@@ -27,7 +27,7 @@ $userData = getUser($_SESSION["id"])[0];
       <p>Journal Anda</p>
     </a>
 
-    <a href="createJournal.php" class="btn-link btn-active">
+    <a href="createJournal.php" class="btn-link btn-active <?= $currentPage === 'createJournal.php' ? 'active' : '' ?>">
       <svg
         width="25"
         height="25"
@@ -42,7 +42,7 @@ $userData = getUser($_SESSION["id"])[0];
       <p>Tambah Journal</p>
     </a>
 
-    <a href="editProfile.php" class="btn-link btn-active">
+    <a href="editProfile.php" class="btn-link btn-active <?= $currentPage === 'editProfile.php' ? 'active' : '' ?>">
       <svg
         width="25"
         height="25"
@@ -73,7 +73,7 @@ $userData = getUser($_SESSION["id"])[0];
       <p>Edit Profile</p>
     </a>
 
-    <a href="../logout.php" class="btn-link btn-active">
+    <a href="../logout.php" class="btn-link btn-active ">
       <svg
         width="25"
         height="25"
