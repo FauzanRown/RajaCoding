@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  max-width: 1500px;
+  /* max-width: 1500px; */
   margin: auto;
 }
 
@@ -100,19 +100,19 @@ body {
   border-radius: 10px;
   display: flex;
   align-items: center;
+  padding: 16px;
 }
 
 .searchBar input {
   border: 1px solid #767676;
-  padding: 10px 20px;
-  border-radius: 50px;
+  padding: 10px ;
+  border-radius: 4px;
   width: 300px;
   height: 35px;
-  color: rgb(255, 255, 255);
   background-color: transparent;
   text-decoration: none;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 8px;
 }
 
 .dashboardHeader {
@@ -163,12 +163,9 @@ body {
   margin-bottom: 4px;
 }
 
-.form-container p {
-  text-align: center;
-  color: #555;
-  margin-bottom: 20px;
+.text-center{
+text-align: center;
 }
-
 .form-group {
   margin-bottom: 16px;
 }
