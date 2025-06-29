@@ -61,12 +61,20 @@
   cursor: pointer;
 }
 
-#closeModalBtn {
+.closeModalBtn {
   background-color: #9ca3af;
   color: white;
 }
 
-#submitModalBtn {
+.closeModalBtn:hover {
+  background-color: #80858f;
+}
+
+.submitModalBtn {
   background-color: #2563eb;
   color: white;
+}
+
+.submitModalBtn:hover {
+  background-color: #225bd5;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | List Journal</title>
+    <title>Dashboard | Kategori</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
@@ -134,18 +134,18 @@
         </div>
 
         <div class="form-container">
-          <h1>DAFTAR JOURNAL</h1>
+          <h1>DAFTAR KATEGORI</h1>
           <p>Kelola Semua Jurnal Anda</p>
+
+          <div class="kategori-action">
+            <button class="btn-tambah-kategori">Tambah Kategori</button>
+          </div>
 
           <table id="example" class="table table-striped">
             <thead>
               <tr>
                 <th>No</th>
-                <th>Judul</th>
-                <th>Kategori</th>
-                <th>Nama Mahasiswa</th>
-                <th>Tanggal</th>
-                <th>Status</th>
+                <th>Nama</th>
                 <th>Aksi</th>
               </tr>
             </thead>
@@ -153,57 +153,27 @@
               <tr>
                 <td>1.</td>
                 <td>Magang</td>
-                <td>Magang</td>
-                <td>Fulan</td>
-                <td>07-05-2025</td>
-                <td>
-                  <select class="status-dropdown">
-                    <option value="">- Pilih Status -</option>
-                    <option value="tidak">Tidak Valid</option>
-                    <option value="valid">Valid</option>
-                    <option value="review">Belum di Review</option>
-                  </select>
-                </td>
                 <td>
                   <button class="btn view">#</button>
+                  <button class="btn delete">#</button>
                   <button class="btn edit">#</button>
                 </td>
               </tr>
               <tr>
                 <td>2.</td>
                 <td>Tugas Akhir</td>
-                <td>Skripsi</td>
-                <td>Fulan</td>
-                <td>07-05-2025</td>
-                <td>
-                  <select class="status-dropdown">
-                    <option value="">- Pilih Status -</option>
-                    <option value="tidak">Tidak Valid</option>
-                    <option value="valid">Valid</option>
-                    <option value="review">Belum di Review</option>
-                  </select>
-                </td>
                 <td>
                   <button class="btn view">#</button>
+                  <button class="btn delete">#</button>
                   <button class="btn edit">#</button>
                 </td>
               </tr>
               <tr>
                 <td>3.</td>
                 <td>Tugas Akhir</td>
-                <td>Skripsi</td>
-                <td>Fulan</td>
-                <td>07-05-2025</td>
-                <td>
-                  <select class="status-dropdown">
-                    <option value="">- Pilih Status -</option>
-                    <option value="tidak">Tidak Valid</option>
-                    <option value="valid">Valid</option>
-                    <option value="review">Belum di Review</option>
-                  </select>
-                </td>
                 <td>
                   <button class="btn view">#</button>
+                  <button class="btn delete">#</button>
                   <button class="btn edit">#</button>
                 </td>
               </tr>
@@ -218,24 +188,18 @@
       </div>
     </div>
 
-    <!-- Pop-Up Edit Journal -->
-    <div id="editModal" class="modal">
+    <!-- === POP-UP TAMBAH KATEGORI === -->
+    <div id="modalTambahKategori" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Edit Journal <span id="judulModal">[Judul]</span></h3>
-        <label for="revisi">Revisi</label>
+        <span class="close" id="closeTambahKategori">&times;</span>
+        <h3>Tambah Kategori</h3>
+
+        <label for="namaKategori">Nama</label>
         <input
           type="text"
-          id="revisi"
-          placeholder="Masukkan catatan revisi..."
+          id="namaKategori"
+          placeholder="Masukkan nama kategori..."
         />
-
-        <label for="statusSelect">Status</label>
-        <select id="statusSelect">
-          <option value="tidak">Tidak Valid</option>
-          <option value="valid">Valid</option>
-          <option value="review">Belum di Review</option>
-        </select>
 
         <div class="modal-actions">
           <button class="closeModalBtn" id="closeModalBtn">Close</button>
@@ -244,6 +208,28 @@
       </div>
     </div>
 
-    <script src="../../assets/js/RoleDosen/editJournalDosen.js"></script>
+    <script src="../../assets/js/RoleDosen/tambahKategoriDosen.js"></script>
+
+    <!-- === POP-UP EDIT KATEGORI === -->
+    <div id="modalEditKategori" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeEditKategori">&times;</span>
+        <h3>Edit Kategori</h3>
+
+        <label for="editNamaKategori">Nama</label>
+        <input
+          type="text"
+          id="editNamaKategori"
+          placeholder="Edit nama kategori..."
+        />
+
+        <div class="modal-actions">
+          <button class="closeModalBtn" id="closeModalEditBtn">Close</button>
+          <button class="submitModalBtn" id="submitModalEditBtn">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/RoleDosen/editKategoriDosen.js"></script>
   </body>
 </html>

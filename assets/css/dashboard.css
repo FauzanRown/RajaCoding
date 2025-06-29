@@ -109,11 +109,13 @@ body {
   border-radius: 4px;
   width: 300px;
   height: 35px;
-  background-color: transparent;
+  color: #000; /* teks jadi hitam */
+  background-color: #fff; /* background jadi putih */
   text-decoration: none;
-  cursor: pointer;
-  margin-left: 8px;
+  cursor: text;
+  margin-left: 20px;
 }
+
 
 .dashboardHeader {
   display: flex;
@@ -320,10 +322,40 @@ footer {
   background-color: #0ea5e9;
 }
 
+.btn.delete {
+  background-color: #dc3545;
+}
+
 .btn.edit:hover {
   background-color: #eab308;
 }
 
 .btn.view:hover {
   background-color: #0284c7;
+}
+
+.btn.delete:hover {
+  background-color: #c63241;
+}
+
+/* === Aksi Kategori === */
+.kategori-action {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* === Tombol Tambah Kategori === */
+.btn-tambah-kategori {
+  background-color: #22c55e;
+  color: white;
+  padding: 10px 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-tambah-kategori:hover {
+  background-color: #16a34a;
 }

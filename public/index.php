@@ -1,348 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <title>StudentLogBook</title>
-  </head>
-  <body>
-    <!-- Ini Bagian Navbar Nya -->
-    <nav class="navbar">
-      <div>
-        <a href="">
-          <img src="../assets/img/logo.png" alt="" />
-        </a>
-      </div>
 
-      <ul>
-        <li><a href="">Beranda</a></li>
-        <li><a href="">Fitur</a></li>
-        <li><a href="">Project</a></li>
-        <li><a href="">Kontak</a></li>
-      </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <title>StudentLogBook</title>
+</head>
 
-      <div class="buttondiv">
-        <a href="login.php">
-          <button class="navButton" hre>Login</button>
-        </a>
+<body>
+  <!-- Ini Bagian Navbar Nya -->
+  <nav class="navbar">
+    <div>
+      <a href="">
+        <img src="../assets/img/logo.png" alt="" />
+      </a>
+    </div>
 
-        <a href="register.php">
-          <button class="navButton2">Sign Up</button>
-        </a>
-      </div>
-    </nav>
-    <!-- Ini Akhir Bagian Navbar Nya -->
+    <ul>
+      <li><a href="">Beranda</a></li>
+      <li><a href="#fitur">Fitur</a></li>
+      <li><a href="#testimoni">Testimoni</a></li>
+      <li><a href="#Footer">Kontak</a></li>
+    </ul>
 
-    <!-- Ini Bagian Main Container Nya -->
-    <section id="MainContainer">
-      <div class="container">
-        <div class="containerContent">
-          <h1>
-            Kelola Jurnal Harian <br />
-            Mahasiswa Lebih Praktis <br />
-            Dan Terstruktur
-          </h1>
-          <p>
-            StudentLogBook membantu mahasiswa mendokumentasikan aktivitas harian
-            seperti magang, KKN, atau skripsi dengan mudah dan rapi.
-          </p>
-          <button class="containerButton">Mulai Sekarang</button>
-        </div>
-        <img src="../assets/img/Image Container.png" alt="" />
-      </div>
-    </section>
-    <!-- Ini Akhir Bagian Main Container Nya -->
+    <div class="buttondiv">
+      <a href="login.php">
+        <button class="navButton" hre>Login</button>
+      </a>
 
-    <!-- Ini Bagian Dari fitur fiturnya -->
-    <section id="fitur">
-      <div class="fiturText">
-        <h4>BEKERJA DENGAN MUDAH</h4>
-        <h1>Catat, Validasi, Unduh.</h1>
-        <p>Semua bisa dilakukan langsung dari satu platform!</p>
-      </div>
+      <a href="register.php">
+        <button class="navButton2">Sign Up</button>
+      </a>
+    </div>
+  </nav>
+  <!-- Ini Akhir Bagian Navbar Nya -->
 
-      <div class="fiturCardContainer">
-        <div class="fiturCard">
-          <div class="fiturName">
-            <div class="rounded roundedcolor1">
-              <img src="../assets/img/icon1.png" alt="" />
-            </div>
-            <h3>
-              Catat Kegiatan <br />
-              Harian
-            </h3>
-          </div>
-          <p style="width: 369px">
-            Mahasiswa dapat mengisi jurnal aktivitas harian mereka dengan mudah
-            dan terstruktur berdasarkan tanggal dan deskripsi.
-          </p>
-        </div>
-
-        <div class="fiturCard">
-          <div class="fiturName">
-            <div class="rounded roundedcolor2">
-              <img src="../assets/img/icon1.png" alt="" />
-            </div>
-            <h3>
-              Validasi oleh Dosen <br />
-              Pembimbing
-            </h3>
-          </div>
-          <p style="width: 369px">
-            Setiap entri jurnal dapat ditinjau dan divalidasi secara langsung
-            oleh dosen pembimbing melalui dashboard khusus yang mudah digunakan
-            dan terintegrasi.
-          </p>
-        </div>
-
-        <div class="fiturCard">
-          <div class="fiturName">
-            <div class="rounded roundedcolor3">
-              <img src="../assets/img/icon1.png" alt="" />
-            </div>
-            <h3>
-              Riwayat & Filter <br />
-              Aktivitas
-            </h3>
-          </div>
-          <p style="width: 369px">
-            Pengguna dapat melihat semua aktivitas sebelumnya dan memfilternya
-            berdasarkan tanggal atau kata kunci tertentu untuk memudahkan
-            pencarian data.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Ini Akhir Bagian Dari fitur fiturnya -->
-
-    <!-- Ini Bagian Advertise nya -->
-    <section id="advertise">
-      <div class="advertiseImage">
-        <img src="../assets/img/Image Advertise.png" alt="" />
-      </div>
-      <div class="advertiseText">
-        <h4>COBA SEKARANG JUGA</h4>
-        <h1>Kelola Aktivitas Mahasiswa Lebih Mudah</h1>
+  <!-- Ini Bagian Main Container Nya -->
+  <section id="MainContainer">
+    <div class="container">
+      <div class="containerContent">
+        <h1>
+          Kelola Jurnal Harian <br />
+          Mahasiswa Lebih Praktis <br />
+          Dan Terstruktur
+        </h1>
         <p>
-          Catat kegiatan harian dengan mudah, validasi jurnal langsung dari
-          dashboard dosen. StudentLogBook bantu proses bimbingan jadi lebih
-          cepat dan efisien.
+          StudentLogBook membantu mahasiswa mendokumentasikan aktivitas harian
+          seperti magang, KKN, atau skripsi dengan mudah dan rapi.
         </p>
-        <div class="advertiseButton">
-          <input type="email" placeholder="Alamat Email" />
-          <button>Mulai Akses</button>
-        </div>
+        <button class="containerButton">Mulai Sekarang</button>
       </div>
-    </section>
-    <!-- Ini Akhir Bagian Advertise nya -->
+      <img src="../assets/img/Image Container.png" alt="" />
+    </div>
+  </section>
+  <!-- Ini Akhir Bagian Main Container Nya -->
 
-    <!-- Ini Bagian Testimoni Nya -->
-    <section id="testimoni">
-      <div class="testimoniText">
-        <h4>TESTIMONI</h4>
-        <h1>Apa Kata Mereka ?</h1>
-        <p>Mereka Sudah Mencoba, Sekarang Giliran Kamu!</p>
+  <!-- Ini Bagian Dari fitur fiturnya -->
+  <section id="fitur">
+    <div class="fiturText">
+      <h4>BEKERJA DENGAN MUDAH</h4>
+      <h1>Catat, Validasi, Unduh.</h1>
+      <p>Semua bisa dilakukan langsung dari satu platform!</p>
+    </div>
 
-        <div class="testimoniContent">
-          <div class="testimoniCard">
-            <div class="fotoTestimoni">
-              <img
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
-                alt=""
-              />
-            </div>
-            <div class="testimoniPerson">
-              <div class="badgeTestimoni">DOSEN</div>
-              <h3>Muhammad Fauzan Anwar</h3>
-              <p>
-                “Fitur validasinya membantu banget buat saya sebagai dosen
-                pembimbing. Bisa cek dan komentar langsung di sistem.”
-              </p>
-            </div>
+    <div class="fiturCardContainer">
+      <div class="fiturCard">
+        <div class="fiturName">
+          <div class="rounded roundedcolor1">
+            <img src="../assets/img/icon1.png" alt="" />
           </div>
-
-          <div class="testimoniCard">
-            <div class="fotoTestimoni">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-                alt=""
-              />
-            </div>
-            <div class="testimoniPerson">
-              <div class="badgeTestimoni">PENGGUNA</div>
-              <h3>Ahmad Fadhil Fanani</h3>
-              <p>
-                “Saya bisa akses jurnal kapan aja dan dimana aja lewat HP,
-                tinggal input kegiatan tiap hari. Gak ribet, tinggal klik!”
-              </p>
-            </div>
-          </div>
-
-          <div class="testimoniCard">
-            <div class="fotoTestimoni">
-              <img
-                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce"
-                alt=""
-              />
-            </div>
-            <div class="testimoniPerson">
-              <div class="badgeTestimoni">DOSEN</div>
-              <h3>Lutfan Alaudin Naja</h3>
-              <p>
-                “StudentLogBook bikin proses administrasi kegiatan jadi lebih
-                cepat dan efisien. Highly recommended!”
-              </p>
-            </div>
-          </div>
+          <h3>
+            Catat Kegiatan <br />
+            Harian
+          </h3>
         </div>
-
-        <div class="testimoniContent2">
-          <div class="testimoniCard">
-            <div class="fotoTestimoni">
-              <img
-                src="https://images.unsplash.com/photo-1527980965255-d3b416303d12"
-                alt=""
-              />
-            </div>
-            <div class="testimoniPerson">
-              <div class="badgeTestimoni">DOSEN</div>
-              <h3>Farhan</h3>
-              <p>
-                “Simple tapi fungsional. Cocok banget buat mahasiswa yang lagi
-                magang atau tugas akhir. jadi sanagt membantu”
-              </p>
-            </div>
-          </div>
-
-          <div class="testimoniCard">
-            <div class="fotoTestimoni">
-              <img
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
-                alt=""
-              />
-            </div>
-            <div class="testimoniPerson">
-              <div class="badgeTestimoni">PENGGUNA</div>
-              <h3>Shandy Dwika Alfarezki</h3>
-              <p>
-                “Akhirnya enggak perlu kirim jurnal lewat email setiap hari.
-                Semua rapi dan mudah dicek dosen. Keren banget!”
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Ini Akhir Bagian Testimoni Nya -->
-
-    <!-- Ini Bagian Call To Action Nya   -->
-    <section id="CTA">
-      <div class="CTAImage">
-        <img src="../assets/img/CTA Background.png" alt="" />
-      </div>
-      <div class="CTAContent">
-        <h1>Siap Catat Setiap Langkah Perjalananmu?</h1>
-        <p>Mulai kelola jurnal kegiatanmu dengan rapi dan efisien.</p>
-        <div>
-          <button>Mulai Akses</button>
-          <a href="">Hubungi Kami </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ini Akhir Bagian Call To Action Nya -->
-    <!-- Ini Bagian Footer -->
-    <section id="Footer">
-      <div class="footerContent">
-        <div class="isikonten">
-          <img src="../assets/img/logo.png" alt="" />
-          <p>Sistem jurnal kegiatan mahasiswa berbasis web.</p>
-        </div>
-        <div class="isikonten">
-          <h1>Fitur</h1>
-          <ul>
-            <li><a href="">Input Jurnal Harian</a></li>
-            <li><a href="">Validasi Dosen</a></li>
-            <li><a href="">Riwayat Kegiatan</a></li>
-            <li><a href="">Unduh PDF</a></li>
-          </ul>
-        </div>
-        <div class="isikonten">
-          <h1>Tautan</h1>
-          <ul>
-            <li><a href="">Tentang Kami</a></li>
-            <li><a href="">Kebijakan Privasi</a></li>
-            <li><a href="">Panduang Penggunaan</a></li>
-            <li><a href="">Pusat Bantuan</a></li>
-          </ul>
-        </div>
-        <div class="isikonten">
-          <h1>Contact</h1>
-
-          <div class="contact">
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3.53107 1.84495C3.85885 1.53617 4.2526 1.29658 4.68619 1.14205C5.11978 0.987528 5.58329 0.921609 6.04599 0.948669C6.50869 0.975729 6.95999 1.09515 7.36995 1.29901C7.77991 1.50287 8.13917 1.7865 8.42388 2.1311L11.7837 6.20119C12.4013 6.94669 12.6191 7.91997 12.3753 8.83678L11.35 12.7017C11.2967 12.9022 11.2994 13.1124 11.3579 13.3116C11.4164 13.5109 11.5286 13.6925 11.6838 13.8387L16.2888 18.1743C16.444 18.3204 16.6368 18.4261 16.8484 18.4812C17.06 18.5363 17.2831 18.5389 17.496 18.4887L21.5973 17.5229C22.0784 17.4097 22.5804 17.4011 23.0656 17.4976C23.5507 17.5942 24.0061 17.7934 24.3975 18.0802L28.7187 21.2447C30.2717 22.3818 30.4156 24.5449 29.0245 25.8532L27.0857 27.6793C25.7006 28.9839 23.628 29.5581 21.6952 28.9181C16.7513 27.279 12.2625 24.6126 8.56179 21.1167C4.84949 17.6312 2.01795 13.4033 0.277188 8.74642C-0.40237 6.92598 0.207233 4.97376 1.59233 3.66727L3.53107 1.84307V1.84495Z"
-                fill="#10507F"
-              />
-            </svg>
-
-            <p>(021) 31048184</p>
-          </div>
-          <div class="contact1">
-            <svg
-              width="32"
-              height="31"
-              viewBox="0 0 32 31"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_244_900)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M0.0999349 7.00697C0.30144 6.17534 0.796792 5.4328 1.50486 4.90097C2.21293 4.36913 3.09176 4.07953 3.9974 4.07959H27.9818C28.8874 4.07953 29.7662 4.36913 30.4743 4.90097C31.1824 5.4328 31.6777 6.17534 31.8792 7.00697L15.9896 16.1543L0.0999349 7.00697ZM0 9.15686V22.5306L11.5984 15.8324L0 9.15686ZM13.5132 16.9375L0.381751 24.5186C0.706193 25.1629 1.21826 25.7073 1.85835 26.0882C2.49845 26.4691 3.24024 26.671 3.9974 26.6703H27.9818C28.7388 26.6705 29.4803 26.4682 30.12 26.0869C30.7598 25.7056 31.2714 25.1611 31.5954 24.5167L18.464 16.9356L15.9896 18.3607L13.5132 16.9356V16.9375ZM20.3807 15.8343L31.9792 22.5306V9.15686L20.3807 15.8324V15.8343Z"
-                  fill="#10507F"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_244_900">
-                  <rect
-                    width="31.9792"
-                    height="30.121"
-                    fill="white"
-                    transform="translate(0 0.314453)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-
-            <p>support@studentlogbook.id</p>
-          </div>
-
-          <p>
-            Jl. Ringroad Selatan, Kragilan, Tamanan, Kec. Banguntapan, Kabupaten
-            Bantul, Daerah Istimewa Yogyakarta 55191
-          </p>
-        </div>
+        <p style="width: 369px">
+          Mahasiswa dapat mengisi jurnal aktivitas harian mereka dengan mudah
+          dan terstruktur berdasarkan tanggal dan deskripsi.
+        </p>
       </div>
 
-      <hr />
+      <div class="fiturCard">
+        <div class="fiturName">
+          <div class="rounded roundedcolor2">
+            <img src="../assets/img/icon1.png" alt="" />
+          </div>
+          <h3>
+            Validasi oleh Dosen <br />
+            Pembimbing
+          </h3>
+        </div>
+        <p style="width: 369px">
+          Setiap entri jurnal dapat ditinjau dan divalidasi secara langsung
+          oleh dosen pembimbing melalui dashboard khusus yang mudah digunakan
+          dan terintegrasi.
+        </p>
+      </div>
 
-      <p class="copyright">
-        All Rights Reserved • Copyright StudentLogbook by RajaCoding 2025 in
-        Yogyakarta
+      <div class="fiturCard">
+        <div class="fiturName">
+          <div class="rounded roundedcolor3">
+            <img src="../assets/img/icon1.png" alt="" />
+          </div>
+          <h3>
+            Riwayat & Filter <br />
+            Aktivitas
+          </h3>
+        </div>
+        <p style="width: 369px">
+          Pengguna dapat melihat semua aktivitas sebelumnya dan memfilternya
+          berdasarkan tanggal atau kata kunci tertentu untuk memudahkan
+          pencarian data.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Ini Akhir Bagian Dari fitur fiturnya -->
+
+  <!-- Ini Bagian Advertise nya -->
+  <section id="advertise">
+    <div class="advertiseImage">
+      <img src="../assets/img/Image Advertise.png" alt="" />
+    </div>
+    <div class="advertiseText">
+      <h4>COBA SEKARANG JUGA</h4>
+      <h1>Kelola Aktivitas Mahasiswa Lebih Mudah</h1>
+      <p>
+        Catat kegiatan harian dengan mudah, validasi jurnal langsung dari
+        dashboard dosen. StudentLogBook bantu proses bimbingan jadi lebih
+        cepat dan efisien.
       </p>
-    </section>
-    <!-- Ini Akhir Bagian Footer -->
-  </body>
+      <div class="advertiseButton">
+        <input type="email" placeholder="Alamat Email" />
+        <button>Mulai Akses</button>
+      </div>
+    </div>
+  </section>
+  <!-- Ini Akhir Bagian Advertise nya -->
+
+  <!-- Ini Bagian Testimoni Nya -->
+  <section id="testimoni">
+    <div class="testimoniText">
+      <h4>TESTIMONI</h4>
+      <h1>Apa Kata Mereka ?</h1>
+      <p>Mereka Sudah Mencoba, Sekarang Giliran Kamu!</p>
+
+      <div class="testimoniContent">
+        <div class="testimoniCard">
+          <div class="fotoTestimoni">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="" />
+          </div>
+          <div class="testimoniPerson">
+            <div class="badgeTestimoni">DOSEN</div>
+            <h3>Muhammad Fauzan Anwar</h3>
+            <p>
+              “Fitur validasinya membantu banget buat saya sebagai dosen
+              pembimbing. Bisa cek dan komentar langsung di sistem.”
+            </p>
+          </div>
+        </div>
+
+        <div class="testimoniCard">
+          <div class="fotoTestimoni">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="" />
+          </div>
+          <div class="testimoniPerson">
+            <div class="badgeTestimoni">PENGGUNA</div>
+            <h3>Ahmad Fadhil Fanani</h3>
+            <p>
+              “Saya bisa akses jurnal kapan aja dan dimana aja lewat HP,
+              tinggal input kegiatan tiap hari. Gak ribet, tinggal klik!”
+            </p>
+          </div>
+        </div>
+
+        <div class="testimoniCard">
+          <div class="fotoTestimoni">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce" alt="" />
+          </div>
+          <div class="testimoniPerson">
+            <div class="badgeTestimoni">DOSEN</div>
+            <h3>Lutfan Alaudin Naja</h3>
+            <p>
+              “StudentLogBook bikin proses administrasi kegiatan jadi lebih
+              cepat dan efisien. Highly recommended!”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimoniContent2">
+        <div class="testimoniCard">
+          <div class="fotoTestimoni">
+            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" alt="" />
+          </div>
+          <div class="testimoniPerson">
+            <div class="badgeTestimoni">DOSEN</div>
+            <h3>Farhan</h3>
+            <p>
+              “Simple tapi fungsional. Cocok banget buat mahasiswa yang lagi
+              magang atau tugas akhir. jadi sanagt membantu”
+            </p>
+          </div>
+        </div>
+
+        <div class="testimoniCard">
+          <div class="fotoTestimoni">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="" />
+          </div>
+          <div class="testimoniPerson">
+            <div class="badgeTestimoni">PENGGUNA</div>
+            <h3>Shandy Dwika Alfarezki</h3>
+            <p>
+              “Akhirnya enggak perlu kirim jurnal lewat email setiap hari.
+              Semua rapi dan mudah dicek dosen. Keren banget!”
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ini Akhir Bagian Testimoni Nya -->
+
+  <!-- Ini Bagian Call To Action Nya   -->
+  <section id="CTA">
+    <div class="CTAImage">
+      <img src="../assets/img/CTA Background.png" alt="" />
+    </div>
+    <div class="CTAContent">
+      <h1>Siap Catat Setiap Langkah Perjalananmu?</h1>
+      <p>Mulai kelola jurnal kegiatanmu dengan rapi dan efisien.</p>
+      <div>
+        <button>Mulai Akses</button>
+        <a href="">Hubungi Kami </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ini Akhir Bagian Call To Action Nya -->
+  <!-- Ini Bagian Footer -->
+  <section id="Footer">
+    <div class="footerContent">
+      <div class="isikonten">
+        <img src="../assets/img/logo.png" alt="" />
+        <p>Sistem jurnal kegiatan mahasiswa berbasis web.</p>
+      </div>
+      <div class="isikonten">
+        <h1>Fitur</h1>
+        <ul>
+          <li><a href="">Input Jurnal Harian</a></li>
+          <li><a href="">Validasi Dosen</a></li>
+          <li><a href="">Riwayat Kegiatan</a></li>
+          <li><a href="">Unduh PDF</a></li>
+        </ul>
+      </div>
+      <div class="isikonten">
+        <h1>Tautan</h1>
+        <ul>
+          <li><a href="">Tentang Kami</a></li>
+          <li><a href="">Kebijakan Privasi</a></li>
+          <li><a href="">Panduang Penggunaan</a></li>
+          <li><a href="">Pusat Bantuan</a></li>
+        </ul>
+      </div>
+      <div class="isikonten">
+        <h1>Contact</h1>
+
+        <div class="contact">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M3.53107 1.84495C3.85885 1.53617 4.2526 1.29658 4.68619 1.14205C5.11978 0.987528 5.58329 0.921609 6.04599 0.948669C6.50869 0.975729 6.95999 1.09515 7.36995 1.29901C7.77991 1.50287 8.13917 1.7865 8.42388 2.1311L11.7837 6.20119C12.4013 6.94669 12.6191 7.91997 12.3753 8.83678L11.35 12.7017C11.2967 12.9022 11.2994 13.1124 11.3579 13.3116C11.4164 13.5109 11.5286 13.6925 11.6838 13.8387L16.2888 18.1743C16.444 18.3204 16.6368 18.4261 16.8484 18.4812C17.06 18.5363 17.2831 18.5389 17.496 18.4887L21.5973 17.5229C22.0784 17.4097 22.5804 17.4011 23.0656 17.4976C23.5507 17.5942 24.0061 17.7934 24.3975 18.0802L28.7187 21.2447C30.2717 22.3818 30.4156 24.5449 29.0245 25.8532L27.0857 27.6793C25.7006 28.9839 23.628 29.5581 21.6952 28.9181C16.7513 27.279 12.2625 24.6126 8.56179 21.1167C4.84949 17.6312 2.01795 13.4033 0.277188 8.74642C-0.40237 6.92598 0.207233 4.97376 1.59233 3.66727L3.53107 1.84307V1.84495Z"
+              fill="#10507F" />
+          </svg>
+
+          <p>(021) 31048184</p>
+        </div>
+        <div class="contact1">
+          <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_244_900)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.0999349 7.00697C0.30144 6.17534 0.796792 5.4328 1.50486 4.90097C2.21293 4.36913 3.09176 4.07953 3.9974 4.07959H27.9818C28.8874 4.07953 29.7662 4.36913 30.4743 4.90097C31.1824 5.4328 31.6777 6.17534 31.8792 7.00697L15.9896 16.1543L0.0999349 7.00697ZM0 9.15686V22.5306L11.5984 15.8324L0 9.15686ZM13.5132 16.9375L0.381751 24.5186C0.706193 25.1629 1.21826 25.7073 1.85835 26.0882C2.49845 26.4691 3.24024 26.671 3.9974 26.6703H27.9818C28.7388 26.6705 29.4803 26.4682 30.12 26.0869C30.7598 25.7056 31.2714 25.1611 31.5954 24.5167L18.464 16.9356L15.9896 18.3607L13.5132 16.9356V16.9375ZM20.3807 15.8343L31.9792 22.5306V9.15686L20.3807 15.8324V15.8343Z"
+                fill="#10507F" />
+            </g>
+            <defs>
+              <clipPath id="clip0_244_900">
+                <rect width="31.9792" height="30.121" fill="white" transform="translate(0 0.314453)" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <p>support@studentlogbook.id</p>
+        </div>
+
+        <p>
+          Jl. Ringroad Selatan, Kragilan, Tamanan, Kec. Banguntapan, Kabupaten
+          Bantul, Daerah Istimewa Yogyakarta 55191
+        </p>
+      </div>
+    </div>
+
+    <hr />
+
+    <p class="copyright">
+      All Rights Reserved • Copyright StudentLogbook by RajaCoding 2025 in
+      Yogyakarta
+    </p>
+  </section>
+  <!-- Ini Akhir Bagian Footer -->
+</body>
+
 </html>
