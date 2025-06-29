@@ -46,21 +46,8 @@ function register()
   } else if ($password !== $password2) {
     $errors["confirm_password"] = "Konfirmasi password tidak valid";
   }
-  $namaFile = $_FILES['img']['name'];
-  $ukuranFile = $_FILES['img']['size'];
-  $error = $_FILES['img']['error'];
-  $tmpName = $_FILES['img']['tmp_name'];
-  // cek apakah tidak ada gambar yang di upload
-  $ekstensiGambar = strtolower(pathinfo($namaFile, PATHINFO_EXTENSION));
-  if ($error == 4) {
-    $errors['gambar'] = "Gambar wajib diupload.";
-  } elseif (!in_array($ekstensiGambar, ['jpg', 'jpeg', 'png'])) {
-    $errors['gambar'] = "Format gambar harus JPG, JPEG, atau PNG.";
-  } elseif ($ukuranFile > (20 * 1024 * 1024)) {
-    $errors['gambar'] = "Ukuran file maksimal adalah 20 MB.";
-  }
   if (!array_filter($errors)) {
-    $gambar = upload();
+    $gambar = 'user.png';
     $created_at = date('Y-m-d H:i:s');
     // enkripsi password
     // PASSWORD APA YANG MAU DI HASH , ALGORITMA APA YANG DIGUNAKANK

@@ -4,8 +4,14 @@ session_start();
 if (isset($_POST['login'])) {
   login();
 }
-if (isset($_SESSION["login"])) {
+if (isset($_SESSION["login"]) && $_SESSION["role"] == "mahasiswa") {
   header("Location: user/journalAnda.php");
+  exit;
+} else if (isset($_SESSION["login"]) && $_SESSION["role"] == "admin") {
+  header("Location: admin/user.php");
+  exit;
+} else if (isset($_SESSION["login"]) && $_SESSION["role"] == "dosen") {
+  header("Location: dosen/journalAnda.php");
   exit;
 }
 ?>
@@ -25,7 +31,7 @@ if (isset($_SESSION["login"])) {
       <div>
         <h1>Login</h1>
         <hr />
-        <p>Masukan Username dan Password Anda</p>
+        <p>Masukan Email dan Password Anda</p>
 
         <form action="" method="post">
           <input type="email" placeholder="Email" name="email"/>

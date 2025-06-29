@@ -37,8 +37,6 @@ if (isset($_POST["register"])) {
           <span style="color:red;"><?= $errors['name'] ?></span><br>
           <input type="email" placeholder="Email" name="email" />
           <span style="color:red;"><?= $errors['email'] ?></span><br>
-          <input type="file" name="img">
-          <span style="color:red;"><?= $errors['img'] ?></span><br>
           <input type="password" placeholder="Password" name="password" />
           <span style="color:red;"><?= $errors['password'] ?></span><br>
           <input type="password" placeholder="Confirm Password" name="confirm_password" />
