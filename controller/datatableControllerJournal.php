@@ -10,7 +10,7 @@ if (!isset($_SESSION["id"])) {
 // require 'function.php';
 // get user pembimbing
 // DB table to use
-$table = 'view_jurnal_category';
+$table = 'view_jurnal_category_desc';
 
 // Table's primary key
 $primaryKey = 'id';
@@ -29,6 +29,27 @@ if ($idPembimbing) {
 // The `db` parameter represents the column name in the database, while the `dt`
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
+function formatTanggalIndonesia($tanggal)
+{
+  $bulan = [
+    1 => 'Januari',
+    'Februari',
+    'Maret',
+    'April',
+    'Mei',
+    'Juni',
+    'Juli',
+    'Agustus',
+    'September',
+    'Oktober',
+    'November',
+    'Desember'
+  ];
+
+  $pecah = explode('-', $tanggal);
+
+  return (int)$pecah[2] . ' ' . $bulan[(int)$pecah[1]] . ' ' . $pecah[0];
+}
 $columns = array(
   array('db' => 'id', 'dt' => 0,    'formatter' => function ($d, $row) {
     return null;
@@ -39,7 +60,7 @@ $columns = array(
     'db' => 'date',
     'dt' => 3,
     'formatter' => function ($d, $row) {
-      return date('d-m-Y', strtotime($d));
+      return formatTanggalIndonesia($d);
     }
   ),
   array('db' => 'status', 'dt' => 4),
@@ -47,16 +68,21 @@ $columns = array(
   array('db' => 'id', 'dt' => 5,    'formatter' => function ($d, $row) {
     return 
     '<div class="btn-group">    
-      <a href="'.$d. '">
+      <a href="viewJournal.php?id='.$d. '">
         <button type="button" class="btn btn-info">
         <i class="fas fa-eye text-white"></i>
         </button>
       </a> 
-      <a href="' . $d . '">
+      <a href="editJournal.php?id=' . $d . '">
         <button type="button" class="btn btn-warning">
         <i class="fas fa-edit text-white"></i>
         </button>   
       </a> 
+      <a href="../../controller/downloadJurnal.php?id=' . $row[0] . '" target="_blank" >
+                <button type="button" class="btn btn-danger">
+        <i class="fas fa-file-pdf text-white"></i>
+        </button>
+      </a>
         <form method="post" action="">
             <input type="hidden" name="hapus_id" value="'.$d. '">
           <button type="submit" name="delete" class="btn btn-danger text-white">
@@ -94,7 +120,12 @@ require('ssp.class.php');
 // Cek apakah user memiliki pembimbing
 if ($idPembimbing && isset($idPembimbing["id"])) {
   $where = "pembimbing_id = " . intval($idPembimbing["id"]);
-
+  if (!empty($_GET['date'])) {
+    $tanggal = $_GET['date']; // format: YYYY-MM-DD
+    $tanggal = mysqli_real_escape_string($conn, $tanggal); // sanitasi
+    // Gabungkan pencarian berdasarkan tanggal dan id pembimbing
+    $where .= " AND DATE(date) = '$tanggal'";
+  }
   echo json_encode(
     SSP::complex($_GET, $sql_details, $table, $primaryKey, $columns, null, $where)
   );
