@@ -1,88 +1,77 @@
--- Buat database tanpa fitur MySQL 8
-CREATE DATABASE `log_book` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS log_book DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE log_book;
 
--- Table `user`
+-- Tabel user
 CREATE TABLE `user` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `role` enum('mahasiswa','dosen','admin') NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `role` ENUM('mahasiswa','dosen','admin') NOT NULL,
+  `image` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Table `category`
+-- Tabel category
 CREATE TABLE `category` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Table `pembimbing`
+-- Tabel pembimbing
 CREATE TABLE `pembimbing` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `mahasiswa_id` bigint unsigned NOT NULL,
-  `dosen_id` bigint unsigned NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `mahasiswa_id` BIGINT UNSIGNED NOT NULL,
+  `dosen_id` BIGINT UNSIGNED NOT NULL,
+  `created_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `mahasiswa_unique` (`mahasiswa_id`),
   KEY `dosen_FK_1` (`dosen_id`),
   CONSTRAINT `dosen_FK_1` FOREIGN KEY (`dosen_id`) REFERENCES `user` (`id`) ON DELETE CASCADE,
   CONSTRAINT `mahasiswa_FK` FOREIGN KEY (`mahasiswa_id`) REFERENCES `user` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Table `jurnal`
+-- Tabel jurnal
 CREATE TABLE `jurnal` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `pembimbing_id` bigint unsigned NOT NULL,
-  `category_id` bigint unsigned NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `note` text NOT NULL,
-  `revision` text,
-  `status` enum('valid','tidak valid','belum di review') NOT NULL DEFAULT 'belum di review',
-  `created_at` timestamp NOT NULL,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `pembimbing_id` BIGINT UNSIGNED NOT NULL,
+  `category_id` BIGINT UNSIGNED NOT NULL,
+  `title` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `note` TEXT NOT NULL,
+  `revision` TEXT,
+  `status` ENUM('valid','tidak valid','belum di review') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'belum di review',
+  `date` DATE NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`),
   KEY `jurnal_category_FK` (`category_id`),
   KEY `jurnal_pembimbing_FK` (`pembimbing_id`),
   CONSTRAINT `jurnal_category_FK` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
   CONSTRAINT `jurnal_pembimbing_FK` FOREIGN KEY (`pembimbing_id`) REFERENCES `pembimbing` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- View: view_jurnal_category
-CREATE OR REPLACE VIEW view_jurnal_category AS 
-SELECT 
-  jurnal.id,
-  jurnal.pembimbing_id,
-  jurnal.category_id,
-  jurnal.name,
-  jurnal.note,
-  jurnal.revision,
-  jurnal.status,
-  jurnal.created_at,
-  category.name AS category_name
+-- View view_jurnal_category
+CREATE OR REPLACE VIEW view_jurnal_category AS
+SELECT jurnal.*, category.name AS category_name
 FROM jurnal
 JOIN category ON jurnal.category_id = category.id;
 
--- View: view_jurnal_category_desc
-CREATE OR REPLACE VIEW view_jurnal_category_desc AS 
+-- View view_jurnal_category_desc
+CREATE OR REPLACE VIEW view_jurnal_category_desc AS
 SELECT 
-  jurnal.id,
-  jurnal.pembimbing_id,
-  jurnal.category_id,
-  jurnal.name,
-  jurnal.note,
-  jurnal.revision,
-  jurnal.status,
-  jurnal.created_at,
-  category.name AS category_name,
-  user.name AS mahasiswa_name
-FROM jurnal
-JOIN category ON jurnal.category_id = category.id
-JOIN pembimbing ON jurnal.pembimbing_id = pembimbing.id
-JOIN user ON pembimbing.mahasiswa_id = user.id
-ORDER BY jurnal.created_at DESC;
+    jurnal.*, 
+    category.name AS category_name,
+    user.name AS mahasiswa_name
+FROM 
+    jurnal
+JOIN 
+    category ON jurnal.category_id = category.id
+JOIN 
+    pembimbing ON jurnal.pembimbing_id = pembimbing.id
+JOIN 
+    user ON pembimbing.mahasiswa_id = user.id
+ORDER BY 
+    jurnal.date DESC;
