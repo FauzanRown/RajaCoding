@@ -26,6 +26,9 @@ if (isset($_POST["register"])) {
 
 <body>
   <div class="container">
+    <div class="back-link">
+        <a href="../index.html">← Back</a>
+      </div>
     <div class="content">
       <div>
         <h1>Register</h1>

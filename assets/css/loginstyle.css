@@ -52,6 +52,12 @@ body {
   font-size: 44px;
 }
 
+.content h1 a {
+  text-decoration: none;
+  color: #1f7cff; 
+}
+
+
 .content p {
   margin-top: 30px;
   color: #575455;
