@@ -13,7 +13,7 @@ function create()
   // var_dump($_POST);
   $title = htmlspecialchars($data["title"]);
   $date = htmlspecialchars($data["date"]);
-  $category = htmlspecialchars($data["category"]);
+  $category = htmlspecialchars($data["category"] ?? "") ;
   $description =  $data["description"];
   empty($title) ? $errors["title"] = "Judul Jurnal Wajib di isi" : "";
   empty($date) ? $errors["date"] = "Tanggal Jurnal Wajib di isi" : "";

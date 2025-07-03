@@ -10,7 +10,7 @@ if ($_SESSION['role'] !== 'admin') {
   exit;
 }
 if (isset($_POST["submit"])) {
-  if ($hasil = createUser() > 0) {
+  if ($hasil = createUser() > 0&&$errors['error'] == 1) {
     $_SESSION["success"] = "Berhasil Tambah User  ";
     $successMsg = $_SESSION["success"];
     unset($_SESSION["success"]);
@@ -126,16 +126,16 @@ if (isset($_POST["update"])) {
           <div class="modal-body">
             <div class="form-group w-100">
               <label>Nama User</label>
-              <input type="text" placeholder="Username" name="name" />
+              <input type="text" placeholder="Username" name="name" required />
               <span style="color:red;"><?= $errors['name'] ?></span>
               <label class="mt-2">Email User</label>
-              <input type="email" placeholder="Email" name="email" />
+              <input type="email" placeholder="Email" name="email" required />
               <span style="color:red;"><?= $errors['email'] ?></span><br>
               <label class="mt-2">Image User</label>
-              <input class="form-control" type="file" name="img">
+              <input class="form-control" type="file" name="img" >
               <span style="color:red;"><?= $errors['img'] ?></span><br>
               <label class="mt-2">Role User</label>
-              <select name="role">
+              <select name="role" required>
                 <option value="">Pilih Role</option>
                 <option value="admin">Admin</option>
                 <option value="dosen">Dosen</option>
@@ -143,10 +143,10 @@ if (isset($_POST["update"])) {
               </select>
               <span style="color:red;"><?= $errors['role'] ?></span><br>
               <label class="mt-2">Password User</label>
-              <input type="password" placeholder="Password" name="password" />
+              <input type="password" placeholder="Password" name="password" required />
               <span style="color:red;"><?= $errors['password'] ?></span><br>
               <label class="mt-2">Confirm Password</label>
-              <input type="password" placeholder="Confirm Password" name="confirm_password" />
+              <input type="password" placeholder="Confirm Password" name="confirm_password" required />
               <span style="color:red;"><?= $errors['confirm_password'] ?></span><br>
               <!-- <select name="kateogri" style="width: 100%;" id="kateogri"></select> -->
             </div>

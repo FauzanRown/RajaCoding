@@ -10,8 +10,8 @@
           <div class="modal-body">
             <div class="form-group w-100">
               <label>Nama Kategori</label>
-              <input type="hidden" value="<?= $row[0] ?>" name="edit_id" />
-              <input type="text" name="kategori" id="kategori" value="<?= $row[1] ?>">
+              <input type="hidden" value="<?= $row[0] ?>" name="edit_id" required />
+              <input type="text" name="kategori" id="kategori" value="<?= $row[1] ?>" required>
               <!-- <select name="kateogri" style="width: 100%;" id="kateogri"></select> -->
             </div>
           </div>

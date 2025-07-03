@@ -50,11 +50,11 @@ if (isset($_POST["submit"])) {
           <div class="form-flex">
             <div class="form-group">
               <label for="name">Nama</label>
-              <input type="text" placeholder="Masukkan Nama Anda" name="name" id="name" value="<?= $userData["name"] ?>" />
+             <input type="text" required placeholder="Masukkan Nama Anda" name="name" id="name" value="<?= $userData["name"] ?>" />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" placeholder="Masukkan Email Anda" name="email" id="email" value="<?= $userData["email"] ?>" />
+              <input type="email" required placeholder="Masukkan Email Anda" name="email" id="email" value="<?= $userData["email"] ?>" />
             </div>
           </div>
           <label for="img">Foto Profile</label>

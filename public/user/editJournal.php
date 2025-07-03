@@ -85,25 +85,25 @@ if (isset($_POST["submit"])) {
         <form action="" method="post">
           <div class="form-group">
             <label>Judul</label>
-            <input name="title" type="text" placeholder="Masukkan judul jurnal" value="<?= $data["title"] ?>" />
+            <input name="title" type="text" placeholder="Masukkan judul jurnal" value="<?= $data["title"] ?>" required />
           </div>
 
           <div class="form-group">
             <label>Tanggal</label>
             <div class="input-icon">
-              <input type="date" name="date" value="<?= $data["date"] ?>" />
+              <input type="date" name="date" value="<?= $data["date"] ?>" required />
               <span>📅</span>
             </div>
           </div>
 
           <div class="form-group">
             <label>Kategori</label>
-            <select name="category" id="category">
+            <select name="category" id="category" required>
               <option value="<?= $data["category_id"] ?>" selected><?= $data["category"] ?></option>
             </select>
           </div>
           <label>Deskripsi</label>
-          <textarea id="summernote" name="description"><?= $data["note"] ?></textarea>
+          <textarea required id="summernote" name="description"><?= $data["note"] ?></textarea>
 
           <div class="submit-button">
             <button type="submit" name="submit">Submit</button>

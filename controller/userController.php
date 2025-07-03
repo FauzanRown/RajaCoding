@@ -1,6 +1,6 @@
 <?php
 require 'function.php';
-$errors = ['name' => '', 'email' => '', 'img' => '', 'file' => '', 'password' => '', 'confirm_password' => '', 'role' => ''];
+$errors = ['name' => '', 'email' => '', 'img' => '', 'file' => '', 'password' => '', 'confirm_password' => '', 'role' => '','error'=>''];
 
 function update($id)
 {
@@ -201,6 +201,8 @@ function createUser()
       $stmt->close();
       return 0; // gagal
     }
+  } else {
+    $errors['error'] = 0;
   }
 
   return $errors;

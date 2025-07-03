@@ -120,7 +120,8 @@ if (isset($_POST["update"])) {
           <div class="modal-body">
             <div class="form-group w-100">
               <label>Nama Kategori</label>
-              <input type="text" name="kategori" id="kategori">
+              <input type="text" name="kategori" id="kategori" required>
+
               <!-- <select name="kateogri" style="width: 100%;" id="kateogri"></select> -->
             </div>
           </div>

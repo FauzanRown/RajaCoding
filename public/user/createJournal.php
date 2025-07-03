@@ -59,24 +59,24 @@ if (isset($_POST["submit"])) {
         <form action="" method="post">
           <div class="form-group">
             <label>Judul</label>
-            <input name="title" type="text" placeholder="Masukkan judul jurnal" />
+            <input name="title" type="text" placeholder="Masukkan judul jurnal" required />
           </div>
 
           <div class="form-group">
             <label>Tanggal</label>
             <div class="input-icon">
-              <input type="date" name="date" />
+              <input type="date" name="date" required />
               <span>📅</span>
             </div>
           </div>
 
           <div class="form-group">
             <label>Kategori</label>
-            <select name="category" id="category"></select>
+            <select name="category" id="category" required></select>
           </div>
           <label>Deskripsi</label>
           <div class="summernote-custom" style="text-align: left;">
-            <textarea id="summernote" name="description"></textarea>
+            <textarea id="summernote" name="description" required></textarea>
           </div>
           <div class="submit-button">
             <button type="submit" name="submit">Submit</button>

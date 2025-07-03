@@ -1,6 +1,6 @@
   <!-- modal  tambah tempat tugas-->
 
-  <div class="modal fade modal-lg" id="<?= 'modalUpdateUser'.$row[0] ?>" tabindex="-1">
+  <div class="modal fade modal-lg" id="<?= 'modalUpdateUser' . $row[0] ?>" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -13,13 +13,13 @@
             <input type="hidden" value="<?= $row[4] ?>" name="gambarLama" />
             <div class="form-group w-100">
               <label>Nama User</label>
-              <input type="text" value="<?= $row[1] ?>" placeholder="Username" name="name" />
+              <input type="text" value="<?= $row[1] ?>" placeholder="Username" name="name" required />
               <label class="mt-2">Email User</label>
-              <input type="email" value="<?= $row[2] ?>" placeholder="Email" name="email" />
+              <input type="email" value="<?= $row[2] ?>" placeholder="Email" name="email" required />
               <label class="mt-2">Image User</label>
               <input class="form-control" type="file" name="img">
               <label class="mt-2">Role User</label>
-              <select name="role">
+              <select name="role" required>
                 <option value="">Pilih Role</option>
                 <option value="admin" <?= ($row[3] == 'admin') ? 'selected' : '' ?>>Admin</option>
                 <option value="dosen" <?= ($row[3] == 'dosen') ? 'selected' : '' ?>>Dosen</option>
@@ -27,9 +27,9 @@
               </select>
               <span style="color:red;"></span><br>
               <label class="mt-2">Password User</label>
-              <input type="password" placeholder="Password" name="password" />
+              <input type="password" required placeholder="Password" name="password" />
               <label class="mt-2">Confirm Password</label>
-              <input type="password" placeholder="Confirm Password" name="confirm_password" />
+              <input type="password" required placeholder="Confirm Password" name="confirm_password" />
               <!-- <select name="kateogri" style="width: 100%;" id="kateogri"></select> -->
             </div>
           </div>
