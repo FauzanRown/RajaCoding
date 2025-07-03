@@ -28,7 +28,7 @@ if (isset($_SESSION["login"]) && $_SESSION["role"] == "mahasiswa") {
 <body>
   <div class="container">
     <div class="back-link">
-        <a href="../index.html">← Back</a>
+        <a href="index.php">← Back</a>
       </div>
     <div class="content">
       <div>
@@ -36,9 +36,9 @@ if (isset($_SESSION["login"]) && $_SESSION["role"] == "mahasiswa") {
         <hr />
         <p>Masukan Email dan Password Anda</p>
         <form action="" method="post">
-          <input type="email" placeholder="Email" name="email"/>
+          <input type="email" placeholder="Email" name="email" required/>
           <span style="color:red;"><?= $errors['email'] ?></span><br>
-          <input type="password" placeholder="Password" name="password" />
+          <input type="password" placeholder="Password" name="password" required/>
           <span style="color:red;"><?= $errors['password'] ?></span><br>
           <button type="submit" name="login">Login</button>
           <p>

@@ -27,8 +27,8 @@ if (isset($_POST["register"])) {
 <body>
   <div class="container">
     <div class="back-link">
-        <a href="../index.html">← Back</a>
-      </div>
+      <a href="index.php">← Back</a>
+    </div>
     <div class="content">
       <div>
         <h1>Register</h1>
@@ -36,13 +36,13 @@ if (isset($_POST["register"])) {
         <p>Masukan Username dan Password Anda</p>
 
         <form action="" method="post" enctype="multipart/form-data">
-          <input type="text" placeholder="Username" name="name" />
+          <input type="text" placeholder="Username" name="name" required />
           <span style="color:red;"><?= $errors['name'] ?></span><br>
-          <input type="email" placeholder="Email" name="email" />
+          <input type="email" placeholder="Email" name="email" required />
           <span style="color:red;"><?= $errors['email'] ?></span><br>
-          <input type="password" placeholder="Password" name="password" />
+          <input type="password" placeholder="Password" name="password" required />
           <span style="color:red;"><?= $errors['password'] ?></span><br>
-          <input type="password" placeholder="Confirm Password" name="confirm_password" />
+          <input type="password" placeholder="Confirm Password" name="confirm_password" required />
           <span style="color:red;"><?= $errors['confirm_password'] ?></span><br>
           <button type="submit" name="register">Daftar</button>
           <p>Sudah Punya Akun? <a href="login.php">Masuk</a></p>
