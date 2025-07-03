@@ -23,6 +23,11 @@ if (isset($_POST["submit"])) {
     unset($_SESSION["error"]);
   }
 }
+$idMahasiswa = $_SESSION['id'];
+
+// Cek apakah mahasiswa punya pembimbing
+$result = mysqli_query($conn, "SELECT * FROM pembimbing WHERE mahasiswa_id = $idMahasiswa");
+$punyaPembimbing = mysqli_num_rows($result) > 0;
 
 ?>
 
@@ -53,35 +58,42 @@ if (isset($_POST["submit"])) {
 
     <div id="content">
       <div class="form-container tambahin">
-        <h1>TAMBAH JOURNAL</h1>
-        <p class="text-center">Kelola Semua Journal Anda</p>
+        <?php if ($punyaPembimbing): ?>
+          <h1>TAMBAH JOURNAL</h1>
+          <p class="text-center">Kelola Semua Journal Anda</p>
 
-        <form action="" method="post">
-          <div class="form-group">
-            <label>Judul</label>
-            <input name="title" type="text" placeholder="Masukkan judul jurnal" required />
-          </div>
-
-          <div class="form-group">
-            <label>Tanggal</label>
-            <div class="input-icon">
-              <input type="date" name="date" required />
-              <span>📅</span>
+          <form action="" method="post">
+            <div class="form-group">
+              <label>Judul</label>
+              <input name="title" type="text" placeholder="Masukkan judul jurnal" required />
             </div>
-          </div>
 
-          <div class="form-group">
-            <label>Kategori</label>
-            <select name="category" id="category" required></select>
+            <div class="form-group">
+              <label>Tanggal</label>
+              <div class="input-icon">
+                <input type="date" name="date" required />
+                <span>📅</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Kategori</label>
+              <select name="category" id="category" required></select>
+            </div>
+            <label>Deskripsi</label>
+            <div class="summernote-custom" style="text-align: left;">
+              <textarea id="summernote" name="description" required></textarea>
+            </div>
+            <div class="submit-button">
+              <button type="submit" name="submit">Submit</button>
+            </div>
+          </form>
+        <?php else: ?>
+          <div style="color: red; font-weight: bold;">
+            <h1>Anda belum memiliki dosen pembimbing</h1>
+            <p class="text-center">Silakan hubungi dosen pembimbing Anda</p>
           </div>
-          <label>Deskripsi</label>
-          <div class="summernote-custom" style="text-align: left;">
-            <textarea id="summernote" name="description" required></textarea>
-          </div>
-          <div class="submit-button">
-            <button type="submit" name="submit">Submit</button>
-          </div>
-        </form>
+        <?php endif; ?>
       </div>
       <p class="copyright">
         All Rights Reserved • Copyright StudentLogbook by RajaCoding 2025 in
