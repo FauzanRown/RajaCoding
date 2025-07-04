@@ -154,10 +154,11 @@ if (isset($_POST["delete"])) {
 
   <!-- <script src="../../assets/js/RoleUser/journalanda.js"></script> -->
   <script>
-    //Initialize Select2 Elements
+
     $('#mahasiswa').select2({
       theme: 'bootstrap-5',
       placeholder: "Pilih Mahasiswa",
+      dropdownParent: $('#modalBimbinganMahasiswa'),
 
       ajax: {
         url: '../../controller/bimbinganController.php?action=getMhs',
