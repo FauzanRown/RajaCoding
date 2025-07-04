@@ -73,3 +73,72 @@ JOIN
     user ON pembimbing.mahasiswa_id = user.id
 ORDER BY 
     jurnal.date DESC;
+
+INSERT INTO `user` (`name`, `email`, `password`, `role`, `image`, `created_at`) VALUES
+-- Admin
+('Admin 1', 'admin@example.com', 'password123', 'admin', 'default.png', NOW()),
+
+-- Dosen (9 orang)
+('Dosen 1', 'dosen1@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+('Dosen 2', 'dosen2@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+('Dosen 3', 'dosen3@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+('Dosen 4', 'dosen4@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+('Dosen 5', 'dosen5@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+('Dosen 6', 'dosen6@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+('Dosen 7', 'dosen7@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+('Dosen 8', 'dosen8@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+('Dosen 9', 'dosen9@tif.uad.ac.id', 'password123', 'dosen', 'default.png', NOW()),
+
+-- Mahasiswa (20 orang)
+('Mahasiswa 1', '2400018001@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 2', '2400018002@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 3', '2400018003@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 4', '2400018004@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 5', '2400018005@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 6', '2400018006@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 7', '2400018007@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 8', '2400018008@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 9', '2400018009@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 10', '2400018010@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 11', '2400018011@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 12', '2400018012@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 13', '2400018013@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 14', '2400018014@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 15', '2400018015@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 16', '2400018016@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 17', '2400018017@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 18', '2400018018@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 19', '2400018019@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW()),
+('Mahasiswa 20', '2400018020@webmail.uad.ac.id', 'password123', 'mahasiswa', 'default.png', NOW());
+
+INSERT INTO category (name, created_at) VALUES
+('Skripsi', NOW()),
+('Magang', NOW()),
+('PKM', NOW()),
+('Bimbingan Akademik', NOW()),
+('KKN', NOW()),
+('Penelitian', NOW()),
+('Asistensi Mengajar', NOW()),
+('Kegiatan Kampus Merdeka', NOW()),
+('Tugas Besar', NOW()),
+('Studi Literatur', NOW()),
+('Proposal Skripsi', NOW()),
+('Review Jurnal', NOW()),
+('Seminar Hasil', NOW()),
+('Sidang Akhir', NOW()),
+('Diskusi Dosen', NOW()),
+('Rapat Pembimbingan', NOW()),
+('Survei Lapangan', NOW()),
+('Pengumpulan Data', NOW()),
+('Analisis Data', NOW()),
+('Workshop PKM', NOW()),
+('Koordinasi KKN', NOW()),
+('Laporan Magang', NOW()),
+('Konsultasi Dosen', NOW()),
+('Evaluasi Mingguan', NOW()),
+('Logbook Harian', NOW()),
+('Observasi Lapangan', NOW()),
+('Penyusunan Laporan', NOW()),
+('Kegiatan Lab', NOW()),
+('Progress Report', NOW()),
+('Finalisasi Skripsi', NOW());
