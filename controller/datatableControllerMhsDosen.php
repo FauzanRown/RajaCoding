@@ -23,7 +23,7 @@ if (!($currentUser["role"] == "dosen")) {
 $where = "id IN (
     SELECT mahasiswa_id 
     FROM pembimbing 
-    WHERE dosen_id = 5
+    WHERE dosen_id = ". $idUser."
 );";
 
 // Array of database columns which should be read and sent back to DataTables.
