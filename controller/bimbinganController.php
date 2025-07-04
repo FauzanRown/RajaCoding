@@ -4,8 +4,13 @@ require_once 'function.php';
 function getMhs($search)
 {
   global $conn;
-
-  $query = $conn->prepare("SELECT id, name,email FROM user WHERE name LIKE CONCAT('%', ?, '%') LIMIT 20");
+  $query =$conn->prepare("
+  SELECT id, name, email 
+  FROM user 
+  WHERE name LIKE CONCAT('%', ?, '%') 
+    AND role = 'mahasiswa'
+  LIMIT 20
+");
   $query->bind_param("s", $search);
   $query->execute();
   $result = $query->get_result();
